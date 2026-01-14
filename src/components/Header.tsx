@@ -3,6 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import conferenceLogo from "@/assets/conference-logo.png";
+import dmceLogo from "@/assets/dmce-logo.jpg";
 
 const navItems = [
   { name: "Home", path: "/" },
@@ -23,12 +25,14 @@ export const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/80">
       <div className="container flex h-16 items-center justify-between">
-        <Link to="/" className="flex items-center gap-2">
-          <div className="flex flex-col">
+        <Link to="/" className="flex items-center gap-3">
+          <img src={dmceLogo} alt="DMCE Logo" className="h-12 w-auto" />
+          <img src={conferenceLogo} alt="DMCE-GTC 2026 Logo" className="h-12 w-auto" />
+          <div className="flex flex-col hidden sm:flex">
             <span className="font-heading text-lg font-bold text-primary">
               DMCE-GTC 2026
             </span>
-            <span className="text-xs text-muted-foreground hidden sm:block">
+            <span className="text-xs text-muted-foreground">
               Global Tech Convergence
             </span>
           </div>
