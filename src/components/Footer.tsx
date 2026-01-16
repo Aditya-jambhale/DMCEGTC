@@ -16,7 +16,7 @@ export const Footer = () => {
               IT Advancements 2026
             </p>
             <p className="text-sm text-primary-foreground/80 mt-2">
-              In association with Computer Society of India (CSI) Student Chapter
+              In association with Computer Society of India (CSI) Student Branch
             </p>
           </div>
 
