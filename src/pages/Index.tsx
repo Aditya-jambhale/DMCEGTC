@@ -43,11 +43,11 @@ const Index = () => {
             </p>
 
             <p className="text-sm sm:text-base text-primary-foreground/80 max-w-2xl mx-auto mb-10">
-              Co-sponsored by{" "}
+              In association with{" "}
               <span className="text-gold font-medium">
                 Computer Society of India (CSI)
               </span>{" "}
-              Student Chapter
+              Student Branch
             </p>
 
             {/* Countdown Timer */}
