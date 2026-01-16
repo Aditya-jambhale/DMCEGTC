@@ -45,7 +45,7 @@ const CallForPapers = () => {
                   <span className="font-semibold">
                     Datta Meghe College of Engineering (DMCE)
                   </span>
-                  , Airoli, Navi Mumbai (NAAC 'A' Grade | NBA Accredited |
+                  , Airoli, Navi Mumbai (NAAC 'A' Grade | NBA Accredited (Civil Engg. & Chem Engg.) |
                   Affiliated to University of Mumbai) invites research papers for
                 </p>
                 <p className="text-xl sm:text-2xl font-heading font-bold text-primary text-center">

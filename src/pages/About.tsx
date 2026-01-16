@@ -276,7 +276,7 @@ const About = () => {
                   NAAC 'A' Grade
                 </span>
                 <span className="px-4 py-1.5 bg-secondary/20 text-secondary-foreground rounded-full font-medium">
-                  NBA Accredited
+                  NBA Accredited (Civil Engg. & Chem Engg.)
                 </span>
                 <span className="px-4 py-1.5 bg-muted text-muted-foreground rounded-full font-medium">
                   Affiliated to University of Mumbai
