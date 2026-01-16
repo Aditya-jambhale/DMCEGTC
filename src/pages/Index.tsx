@@ -93,7 +93,7 @@ const Index = () => {
             </span>
             <span className="hidden sm:inline text-muted-foreground">•</span>
             <span className="text-muted-foreground text-sm">
-              NAAC 'A' Grade | NBA Accredited
+              NAAC 'A' Grade | NBA Accredited (Civil Engg. & Chem Engg.)
             </span>
           </div>
         </div>

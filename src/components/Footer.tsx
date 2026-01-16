@@ -95,7 +95,7 @@ export const Footer = () => {
                 <p className="font-medium">Datta Meghe College of Engineering</p>
                 <p>Airoli, Navi Mumbai</p>
                 <p className="text-primary-foreground/60 mt-1">
-                  NAAC 'A' Grade | NBA Accredited
+                  NAAC 'A' Grade | NBA Accredited (Civil Engg. & Chem Engg.)
                 </p>
                 <p className="text-primary-foreground/60">
                   Affiliated to University of Mumbai
