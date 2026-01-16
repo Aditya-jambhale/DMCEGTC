@@ -140,6 +140,26 @@ const committees = [
       { name: "Dr. V. S. Kubde", role: "HOD, IT" },
     ],
   },
+  {
+    title: "Reviewer Committee",
+    members: [
+      { name: "Er. N. M. Patil", role: "Senior Consultant, ICE Data Services, London, UK" },
+      { name: "Dr. Laltkumar Singh", role: "Scientist, NPCIL, BARC" },
+      { name: "Er. Vikash Mendhe", role: "Senior Consultant, USA" },
+      { name: "Dr. Sayad Munir", role: "Asst. Vice President, Reliance Jio, Navi Mumbai" },
+      { name: "Dr. S. K. Shine", role: "Principal, LTCOE, Navi Mumbai" },
+      { name: "Dr. S. B. Wankhade", role: "Professor, RGIT, Mumbai" },
+      { name: "Dr. Surendra Bhosale", role: "Former Head, Electrical Engineering, VJTI" },
+      { name: "Dr. Pramod Watekar", role: "Lead & CEO, National Quantum Mission, IIT Kharagpur" },
+      { name: "Dr. Kamini Sirsath", role: "Vice Principal, Sandip Institute of Engineering, Nashik" },
+      { name: "Dr. Madhuri Gedam", role: "Dean Research, CSE, Tiwari College of Engg, Mumbai" },
+      { name: "Dr. D. R. Ingale", role: "Professor & Head, CE, BVCE Navi Mumbai" },
+      { name: "Dr. M.R. Shirole", role: "Asso. Prof., Computer Engg. & IT Dept, VJTI, Mumbai" },
+      { name: "Prof. B. V. Patel", role: "Principal, Shah and Anchor Kutchhi Engg College, Mumbai" },
+      { name: "Er. T. M. Bansod", role: "Industry Consultant" },
+      { name: "Dr. Varshapriya J.N.", role: "Computer Engg. & IT Dept, VJTI, Mumbai" },
+    ],
+  },
 ];
 
 const Committees = () => {
