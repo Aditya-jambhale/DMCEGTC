@@ -121,6 +121,51 @@ const Publication = () => {
               </CardContent>
             </Card>
 
+            {/* Best Paper Awards */}
+            <Card className="shadow-elegant overflow-hidden">
+              <div className="bg-gradient-to-r from-amber-500 to-yellow-500 p-6">
+                <div className="flex items-center gap-4">
+                  <div className="p-3 bg-white/20 rounded-lg">
+                    <Award className="h-8 w-8 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-heading text-xl font-bold text-white">
+                      Best Conference Paper Awards
+                    </h3>
+                    <p className="text-white/80">
+                      Selected from each track
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <CardContent className="p-6">
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div className="p-4 bg-amber-50 rounded-lg border border-amber-200">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="text-2xl">🥇</span>
+                      <h4 className="font-semibold text-foreground">First Prize</h4>
+                    </div>
+                    <ul className="text-sm text-muted-foreground space-y-1">
+                      <li>• E-Certificate</li>
+                      <li>• Medal</li>
+                      <li>• <span className="font-semibold text-amber-600">₹4,000</span> Cash Prize</li>
+                    </ul>
+                  </div>
+                  <div className="p-4 bg-gray-50 rounded-lg border border-gray-200">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="text-2xl">🥈</span>
+                      <h4 className="font-semibold text-foreground">Second Prize</h4>
+                    </div>
+                    <ul className="text-sm text-muted-foreground space-y-1">
+                      <li>• E-Certificate</li>
+                      <li>• Medal</li>
+                      <li>• <span className="font-semibold text-gray-600">₹2,000</span> Cash Prize</li>
+                    </ul>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
             {/* E-Certificate */}
             <Card className="shadow-elegant border-2 border-primary/20">
               <CardContent className="p-6">
@@ -133,11 +178,11 @@ const Publication = () => {
                       E-Certificate
                     </h3>
                     <p className="text-muted-foreground">
-                      E-Certificate will be given to{" "}
+                      E-Certificates will be issued to{" "}
                       <span className="font-medium text-foreground">
                         all authors
                       </span>{" "}
-                      after successful completion of the conference.
+                      upon successful completion of the conference. The conference proceedings will be shared with authors via their registered email IDs.
                     </p>
                   </div>
                 </div>
