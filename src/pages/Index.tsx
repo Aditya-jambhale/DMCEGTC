@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { cn } from "@/lib/utils";
 import { Layout } from "@/components/Layout";
 import { CountdownTimer } from "@/components/CountdownTimer";
 import { Button } from "@/components/ui/button";
@@ -19,61 +20,73 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative bg-gradient-hero text-primary-foreground py-16 sm:py-24 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djItSDI0di0yaDEyek0zNiAyNHYySDI0di0yaDEyeiIvPjwvZz48L2c+PC9zdmc+')] opacity-30" />
-        
+      <section className="relative bg-gradient-hero text-primary-foreground py-20 sm:py-28 lg:py-10 overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/20 rounded-full blur-[120px] animate-pulse" />
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px] animate-pulse delay-700" />
+        </div>
+
         <div className="container relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-block mb-4 px-4 py-1.5 bg-gold/20 rounded-full">
-              <span className="text-gold text-sm font-medium">
-                28-29 April 2026 • Navi Mumbai, India
-              </span>
+            <div className="inline-flex items-center gap-4 glass-dark rounded-full px-6 py-3 mb-10 animate-fade-in shadow-xl border-white/20">
+              <div className="flex items-center gap-2 text-white">
+                <Calendar size={18} className="text-secondary" />
+                <span className="text-sm font-bold tracking-wide">28-29 April 2026</span>
+              </div>
+              <div className="w-px h-5 bg-white/20" />
+              <div className="flex items-center gap-2 text-white">
+                <MapPin size={18} className="text-secondary" />
+                <span className="text-sm font-bold tracking-wide">Navi Mumbai, India</span>
+              </div>
             </div>
 
-            <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
-              Global Tech Convergence
+            <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-[1.1] tracking-tight animate-slide-up">
+              Global Tech <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary via-white to-secondary bg-[length:200%_auto] animate-shimmer">Convergence</span>
             </h1>
 
-            <p className="text-lg sm:text-xl md:text-2xl mb-2 text-primary-foreground/90">
+            <p className="text-xl sm:text-2xl md:text-3xl mb-4 text-white/90 font-medium tracking-tight animate-fade-in delay-300">
               International Conference on Computing and IT Advancements 2026
             </p>
 
-            <p className="text-base sm:text-lg text-gold font-semibold mb-8">
-              DMCE-GTC 2026
-            </p>
+            <div className="inline-block px-4 py-1 bg-white/10 rounded-lg backdrop-blur-sm border border-white/10 mb-10 animate-fade-in delay-500">
+              <p className="text-lg font-bold text-secondary uppercase tracking-[0.2em]">
+                DMCE-GTC 2026
+              </p>
+            </div>
 
-            <p className="text-sm sm:text-base text-primary-foreground/80 max-w-2xl mx-auto mb-10">
-              In association with{" "}
-              <span className="text-gold font-medium">
+            <p className="text-base sm:text-lg text-white/70 max-w-2xl mx-auto mb-12 font-medium">
+              In association with {" "}
+              <span className="text-secondary font-bold underline decoration-secondary/30 underline-offset-4">
                 Computer Society of India (CSI)
               </span>{" "}
               Student Branch
             </p>
 
             {/* Countdown Timer */}
-            <div className="mb-10">
-              <p className="text-sm text-primary-foreground/70 mb-4">
-                Conference begins in
+            <div className="mb-8 p-4 glass-dark rounded-2xl border-white/10 shadow-2xl animate-scale-in">
+              <p className="text-[10px] font-bold  uppercase tracking-[0.3em] text-white/50 mb-3">
+                Countdown to Convergence
               </p>
               <CountdownTimer targetDate={conferenceDate} />
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Button
                 asChild
                 size="lg"
-                className="bg-gold hover:bg-gold-dark text-secondary-foreground font-semibold"
+                className="h-16 px-10 bg-secondary hover:bg-secondary/90 text-navy font-bold text-lg rounded-2xl shadow-xl shadow-secondary/20 hover:scale-105 active:scale-95 transition-all"
               >
                 <Link to="/registration">
                   Register Now
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
               <Button
                 asChild
                 size="lg"
                 variant="outline"
-                className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
+                className="h-16 px-10 border-white/20 bg-white/5 text-white hover:bg-white/10 text-lg rounded-2xl backdrop-blur-sm hover:scale-105 active:scale-95 transition-all"
               >
                 <Link to="/call-for-papers">Submit Paper</Link>
               </Button>
@@ -82,48 +95,60 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Venue Info Bar */}
-      <section className="bg-secondary py-4">
-        <div className="container">
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 text-center">
-            <MapPin className="h-5 w-5 text-primary" />
-            <span className="font-medium text-secondary-foreground">
-              Organized by Department of Computer Engineering, Datta Meghe
-              College of Engineering, Airoli
-            </span>
-            <span className="hidden sm:inline text-muted-foreground">•</span>
-            <span className="text-muted-foreground text-sm">
-              NAAC 'A' Grade | NBA Accredited (Civil Engg. & Chem Engg.)
-            </span>
-          </div>
+      {/* Moving Venue Info Bar */}
+      <section className="bg-navy border-y border-white/10 py-5 overflow-hidden whitespace-nowrap">
+        <div className="flex items-center animate-marquee">
+          {[1, 2, 3].map((i) => (
+            <div key={i} className="flex items-center gap-8 px-4">
+              <div className="flex items-center gap-3">
+                <MapPin className="h-5 w-5 text-secondary" />
+                <span className="font-bold text-white uppercase tracking-wider text-sm">
+                  Organized by Department of Computer Engineering, Datta Meghe College of Engineering, Airoli
+                </span>
+              </div>
+              <span className="text-white/30 font-black">•</span>
+              <div className="flex items-center gap-3">
+                <span className="text-secondary font-black text-sm uppercase">NAAC 'A' Grade</span>
+              </div>
+              <span className="text-white/30 font-black">•</span>
+              <div className="flex items-center gap-3">
+                <span className="text-secondary font-black text-sm uppercase">NBA Accredited</span>
+              </div>
+              <span className="text-white/30 font-black">•</span>
+            </div>
+          ))}
         </div>
       </section>
 
       {/* Conference Tracks */}
-      <section className="py-16 sm:py-20 bg-background">
-        <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3">
+      <section className="py-24 sm:py-32 bg-background relative overflow-hidden">
+        <div className="container relative z-10">
+          <div className="text-center mb-20">
+            <h2 className="font-heading text-4xl sm:text-5xl font-extrabold text-navy mb-6">
               Conference Tracks
             </h2>
-            <div className="h-1 w-20 bg-secondary mx-auto rounded-full" />
+            <div className="h-1.5 w-24 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
-            <Card className="shadow-elegant hover:shadow-lg transition-shadow border-t-4 border-t-primary">
-              <CardContent className="p-6 sm:p-8">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="p-3 bg-primary/10 rounded-lg">
-                    <Cpu className="h-6 w-6 text-primary" />
+          <div className="grid md:grid-cols-2 gap-10 lg:gap-14 max-w-6xl mx-auto">
+            <Card className="group relative overflow-hidden border-none shadow-elegant hover:shadow-2xl transition-all duration-500 rounded-3xl">
+              <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary to-accent" />
+              <CardContent className="p-10">
+                <div className="flex items-center gap-5 mb-8">
+                  <div className="p-4 bg-primary/10 rounded-2xl group-hover:scale-110 transition-transform duration-300">
+                    <Cpu className="h-8 w-8 text-primary" />
                   </div>
-                  <h3 className="font-heading text-xl font-semibold text-foreground">
-                    Track 1
-                  </h3>
+                  <div>
+                    <h3 className="font-heading text-2xl font-bold text-navy">
+                      Track 1
+                    </h3>
+                    <p className="text-primary font-bold text-sm">Computing Excellence</p>
+                  </div>
                 </div>
-                <h4 className="text-lg font-medium text-foreground mb-3">
+                <h4 className="text-xl font-extrabold text-foreground mb-4">
                   Recent Trends in Computer Engineering
                 </h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed font-medium">
                   AI & ML, Deep Learning, Data Science, Big Data Analytics,
                   Cloud Computing, IoT, Cyber Security, Blockchain, Computer
                   Networks, Software Engineering, Web & Mobile Technologies,
@@ -132,20 +157,24 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="shadow-elegant hover:shadow-lg transition-shadow border-t-4 border-t-secondary">
-              <CardContent className="p-6 sm:p-8">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="p-3 bg-secondary/20 rounded-lg">
-                    <Radio className="h-6 w-6 text-secondary" />
+            <Card className="group relative overflow-hidden border-none shadow-elegant hover:shadow-2xl transition-all duration-500 rounded-3xl">
+              <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-secondary to-gold" />
+              <CardContent className="p-10">
+                <div className="flex items-center gap-5 mb-8">
+                  <div className="p-4 bg-secondary/10 rounded-2xl group-hover:scale-110 transition-transform duration-300">
+                    <Radio className="h-8 w-8 text-secondary" />
                   </div>
-                  <h3 className="font-heading text-xl font-semibold text-foreground">
-                    Track 2
-                  </h3>
+                  <div>
+                    <h3 className="font-heading text-2xl font-bold text-navy">
+                      Track 2
+                    </h3>
+                    <p className="text-secondary font-bold text-sm">Electronics Innovation</p>
+                  </div>
                 </div>
-                <h4 className="text-lg font-medium text-foreground mb-3">
+                <h4 className="text-xl font-extrabold text-foreground mb-4">
                   Recent Trends in Electronics Engineering
                 </h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed font-medium">
                   Communication Systems, Signal Processing, VLSI & Embedded
                   Systems, Robotics & Automation, Sensors & Instrumentation,
                   Control Systems, Power Electronics, Smart & Intelligent
@@ -158,99 +187,67 @@ const Index = () => {
       </section>
 
       {/* Quick Info Cards */}
-      <section className="py-16 sm:py-20 bg-muted">
+      <section className="py-24 sm:py-32 bg-muted/30">
         <div className="container">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Link to="/important-dates" className="group">
-              <Card className="h-full hover:shadow-lg transition-all group-hover:border-primary">
-                <CardContent className="p-6 text-center">
-                  <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary transition-colors">
-                    <Calendar className="h-6 w-6 text-primary group-hover:text-primary-foreground transition-colors" />
-                  </div>
-                  <h3 className="font-heading font-semibold text-foreground mb-2">
-                    Important Dates
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    Submission: 27th March 2026
-                  </p>
-                </CardContent>
-              </Card>
-            </Link>
-
-            <Link to="/paper-submission" className="group">
-              <Card className="h-full hover:shadow-lg transition-all group-hover:border-primary">
-                <CardContent className="p-6 text-center">
-                  <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary transition-colors">
-                    <FileText className="h-6 w-6 text-primary group-hover:text-primary-foreground transition-colors" />
-                  </div>
-                  <h3 className="font-heading font-semibold text-foreground mb-2">
-                    Paper Submission
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    Submit your research papers
-                  </p>
-                </CardContent>
-              </Card>
-            </Link>
-
-            <Link to="/registration" className="group">
-              <Card className="h-full hover:shadow-lg transition-all group-hover:border-primary">
-                <CardContent className="p-6 text-center">
-                  <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary transition-colors">
-                    <Users className="h-6 w-6 text-primary group-hover:text-primary-foreground transition-colors" />
-                  </div>
-                  <h3 className="font-heading font-semibold text-foreground mb-2">
-                    Registration
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    Register for the conference
-                  </p>
-                </CardContent>
-              </Card>
-            </Link>
-
-            <Link to="/speakers" className="group">
-              <Card className="h-full hover:shadow-lg transition-all group-hover:border-primary">
-                <CardContent className="p-6 text-center">
-                  <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary transition-colors">
-                    <Users className="h-6 w-6 text-primary group-hover:text-primary-foreground transition-colors" />
-                  </div>
-                  <h3 className="font-heading font-semibold text-foreground mb-2">
-                    Keynote Speakers
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    Meet our distinguished speakers
-                  </p>
-                </CardContent>
-              </Card>
-            </Link>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              { path: "/important-dates", icon: Calendar, title: "Important Dates", desc: "Submission: 27th March 2026", color: "primary" },
+              { path: "/paper-submission", icon: FileText, title: "Paper Submission", desc: "Submit your research papers", color: "accent" },
+              { path: "/registration", icon: Users, title: "Registration", desc: "Register for the conference", color: "secondary" },
+              { path: "/speakers", icon: Users, title: "Keynote Speakers", desc: "Meet our distinguished speakers", color: "navy" }
+            ].map((item, idx) => (
+              <Link key={idx} to={item.path} className="group">
+                <Card className="h-full border-none shadow-md hover:shadow-xl transition-all duration-300 rounded-[2rem] overflow-hidden group-hover:-translate-y-2">
+                  <CardContent className="p-8 text-center">
+                    <div className={cn(
+                      "w-20 h-20 mx-auto mb-6 rounded-3xl flex items-center justify-center transition-all duration-300",
+                      item.color === "primary" ? "bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white" :
+                        item.color === "accent" ? "bg-accent/10 text-accent group-hover:bg-accent group-hover:text-white" :
+                          item.color === "secondary" ? "bg-secondary/10 text-secondary group-hover:bg-secondary group-hover:text-white" :
+                            "bg-navy/10 text-navy group-hover:bg-navy group-hover:text-white"
+                    )}>
+                      <item.icon className="h-10 w-10 transition-transform duration-500 group-hover:rotate-12" />
+                    </div>
+                    <h3 className="font-heading font-extrabold text-navy text-lg mb-2">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm font-bold text-muted-foreground/70">
+                      {item.desc}
+                    </p>
+                  </CardContent>
+                </Card>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 sm:py-20 bg-gradient-hero text-primary-foreground">
-        <div className="container text-center">
-          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
+      <section className="py-24 sm:py-32 relative overflow-hidden">
+        <div className="absolute inset-0 bg-navy z-0" />
+        <div className="absolute inset-0 opacity-20 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djItSDI0di0yaDEyek0zNiAyNHYySDI0di0yaDEyeiIvPjwvZz48L2c+PC9zdmc+')] z-0" />
+
+        <div className="container relative z-10 text-center">
+          <h2 className="font-heading text-4xl sm:text-5xl font-extrabold text-white mb-8">
             Ready to Share Your Research?
           </h2>
-          <p className="text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
+          <p className="text-white/70 mb-12 max-w-2xl mx-auto text-lg font-medium">
             Submit your innovative research papers and be part of the global
             convergence of technology and ideas.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button
               asChild
               size="lg"
-              className="bg-gold hover:bg-gold-dark text-secondary-foreground font-semibold"
+              className="h-16 px-12 bg-secondary hover:bg-secondary/90 text-navy font-bold text-lg rounded-2xl shadow-xl shadow-secondary/20"
             >
-              <Link to="/call-for-papers">View Call for Papers</Link>
+              <Link to="/call-for-papers">View Call for Papers <ArrowRight className="ml-2 h-5 w-5" /></Link>
             </Button>
             <Button
               asChild
               size="lg"
               variant="outline"
-              className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
+              className="h-16 px-12 border-white/20 bg-white/5 text-white hover:bg-white/10 text-lg rounded-2xl backdrop-blur-sm"
             >
               <Link to="/about">Learn More</Link>
             </Button>

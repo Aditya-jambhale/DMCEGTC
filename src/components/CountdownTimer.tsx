@@ -51,12 +51,12 @@ export const CountdownTimer = ({ targetDate }: CountdownTimerProps) => {
       {timeUnits.map((unit) => (
         <div
           key={unit.label}
-          className="flex flex-col items-center p-3 sm:p-6 bg-card rounded-lg shadow-elegant border border-border min-w-[70px] sm:min-w-[100px]"
+          className="flex flex-col items-center p-2 sm:p-4 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 min-w-[65px] sm:min-w-[90px] transition-transform hover:scale-105"
         >
-          <span className="text-2xl sm:text-4xl font-bold text-primary font-heading">
+          <span className="text-xl sm:text-3xl font-extrabold text-secondary font-heading tabular-nums">
             {unit.value.toString().padStart(2, "0")}
           </span>
-          <span className="text-xs sm:text-sm text-muted-foreground mt-1">
+          <span className="text-[10px] sm:text-xs font-bold text-white/40 uppercase tracking-tighter">
             {unit.label}
           </span>
         </div>
