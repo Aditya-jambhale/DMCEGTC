@@ -14,15 +14,25 @@ import {
   Radio,
 } from "lucide-react";
 
+import heroBg from "@/assets/image.png";
+
 const Index = () => {
   const conferenceDate = new Date("2026-04-28T09:00:00");
 
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative bg-gradient-hero text-primary-foreground py-20 sm:py-28 lg:py-10 overflow-hidden">
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      <section
+        className="relative text-white py-24 sm:py-32 lg:py-40 overflow-hidden bg-navy"
+        style={{
+          backgroundImage: `linear-gradient(to bottom, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.7)), url(${heroBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed'
+        }}
+      >
+        {/* Subtle Animated Overlay */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-40">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/20 rounded-full blur-[120px] animate-pulse" />
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px] animate-pulse delay-700" />
         </div>
@@ -112,7 +122,7 @@ const Index = () => {
               </div>
               <span className="text-white/30 font-black">•</span>
               <div className="flex items-center gap-3">
-                <span className="text-secondary font-black text-sm uppercase">NBA Accredited</span>
+                <span className="text-secondary font-black text-sm uppercase">NBA Accredited (civil & Chemical Engineering)</span>
               </div>
               <span className="text-white/30 font-black">•</span>
             </div>

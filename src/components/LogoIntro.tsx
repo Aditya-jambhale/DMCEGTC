@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import conferenceLogo from "@/assets/conference-logo.png";
-import dmceLogo from "@/assets/dmce-logo.jpg";
+import conferenceLogo from "././../assets/conference-logo.png";
+import dmceLogo from "././../assets/website-dmce.png";
+
 import { cn } from "@/lib/utils";
 
 interface LogoIntroProps {
