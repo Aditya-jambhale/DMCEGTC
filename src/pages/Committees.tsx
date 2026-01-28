@@ -1,11 +1,12 @@
 import { Layout } from "@/components/Layout";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Phone, Mail } from "lucide-react";
+import { Phone, User, Users, ShieldCheck, GraduationCap, Building2 } from "lucide-react";
 
 const committees = [
   {
     title: "Chief Patrons",
+    icon: ShieldCheck,
     members: [
       {
         name: "Hon'ble Dr. Subir Kumar Banerjee",
@@ -19,6 +20,7 @@ const committees = [
   },
   {
     title: "Patrons",
+    icon: Users,
     members: [
       {
         name: "Hon'ble Mrs. Gauri Bhattacharya",
@@ -38,10 +40,12 @@ const committees = [
   },
   {
     title: "Conference Convenor",
+    icon: User,
     members: [{ name: "Dr. P. A. Dode", role: "Principal, DMCE, Airoli" }],
   },
   {
-    title: "Conference Chair and CSI CATT Representative",
+    title: "Conference Chair & CSI CATT Representative",
+    icon: GraduationCap,
     members: [
       {
         name: "Dr. A. P. Pande",
@@ -129,6 +133,7 @@ const committees = [
   {
     title: "Advisory Committee",
     members: [
+      { name: "Dr. S. D. Sawarkar", role: "Executive Director, NYSS, Airoli" },
       { name: "Dr. D. J. Pete", role: "Dean Academics" },
       { name: "Dr. A. P. Patil", role: "Director T & P" },
       { name: "Dr. U. Pawar", role: "VP & HOD, Mech Engg" },
@@ -145,10 +150,11 @@ const committees = [
     members: [
       { name: "Er. N. M. Patil", role: "Senior Consultant, ICE Data Services, London, UK" },
       { name: "Dr. Laltkumar Singh", role: "Scientist, NPCIL, BARC" },
-      { name: "Er. Vikash Mendhe", role: "Senior Consultant, USA" },
+      { name: "Er. Vikas Mendhe", role: "Senior Consultant, USA" },
       { name: "Dr. Sayad Munir", role: "Asst. Vice President, Reliance Jio, Navi Mumbai" },
-      { name: "Dr. S. K. Shine", role: "Principal, LTCOE, Navi Mumbai" },
+      { name: "Dr. S. K. Shinde", role: "Principal, LTCOE, Navi Mumbai" },
       { name: "Dr. S. B. Wankhade", role: "Professor, RGIT, Mumbai" },
+      { name: "Mr. Kishor Ahire", role: "Associate Director, Capgemini, Sydney, Australia" },
       { name: "Dr. Surendra Bhosale", role: "Former Head, Electrical Engineering, VJTI" },
       { name: "Dr. Pramod Watekar", role: "Lead & CEO, National Quantum Mission, IIT Kharagpur" },
       { name: "Dr. Kamini Sirsath", role: "Vice Principal, Sandip Institute of Engineering, Nashik" },
@@ -166,121 +172,106 @@ const Committees = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bg-gradient-hero text-primary-foreground py-16 sm:py-20">
-        <div className="container">
+      <section className="bg-navy py-10 sm:py-12 md:py-16 text-white border-b border-white/10 overflow-hidden">
+        <div className="container px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+            <h1 className="font-heading text-2xl sm:text-3xl md:text-4xl font-extrabold mb-3 sm:mb-4 uppercase tracking-tighter">
               Conference Committees
             </h1>
-            <p className="text-primary-foreground/80 text-lg">
-              Meet the dedicated team behind DMCE-GTC 2026
+            <p className="text-white/60 text-xs sm:text-sm md:text-base max-w-2xl mx-auto font-medium">
+              The esteemed leadership and expert panels guiding DMCE-GTC 2026.
             </p>
           </div>
         </div>
       </section>
 
       {/* Committees Grid */}
-      <section className="py-16 sm:py-20 bg-background">
-        <div className="container">
-          <div className="grid gap-6 lg:gap-8">
+      <section className="py-12 sm:py-20 bg-white">
+        <div className="container px-4">
+          <div className="max-w-6xl mx-auto space-y-12 sm:space-y-16">
             {committees.map((committee, index) => (
-              <Card
-                key={index}
-                className={`shadow-elegant ${
-                  index < 4 ? "border-l-4 border-l-primary" : ""
-                }`}
-              >
-                <CardHeader className="pb-3">
-                  <CardTitle className="font-heading text-lg sm:text-xl text-foreground flex items-center gap-2">
-                    <span className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-sm font-bold text-primary">
-                      {index + 1}
-                    </span>
+              <div key={index} className="space-y-6 sm:space-y-8 animate-fade-in">
+                <div className="flex items-center gap-4 group">
+                  <div className="h-0.5 w-8 sm:w-12 bg-primary group-hover:w-16 transition-all duration-500" />
+                  <h2 className="text-xl sm:text-2xl font-black text-navy uppercase tracking-tighter">
                     {committee.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div
-                    className={`grid gap-3 ${
-                      committee.members.length > 4
-                        ? "sm:grid-cols-2 lg:grid-cols-3"
-                        : committee.members.length > 2
-                        ? "sm:grid-cols-2"
-                        : ""
-                    }`}
-                  >
-                    {committee.members.map((member, mIndex) => (
-                      <div
-                        key={mIndex}
-                        className="p-3 bg-muted/50 rounded-lg hover:bg-muted transition-colors"
-                      >
-                        <p className="font-medium text-foreground text-sm sm:text-base">
-                          {member.name}
-                        </p>
-                        {member.role && (
-                          <p className="text-xs sm:text-sm text-muted-foreground mt-0.5">
-                            {member.role}
-                          </p>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+                  </h2>
+                </div>
+
+                <div className={`grid gap-4 sm:gap-6 ${committee.members.length > 3
+                  ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+                  : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+                  }`}>
+                  {committee.members.map((member, mIndex) => (
+                    <Card key={mIndex} className="group border-slate-100 hover:border-primary/20 transition-all duration-300 shadow-sm hover:shadow-md overflow-hidden bg-slate-50/30">
+                      <CardContent className="p-5 sm:p-6">
+                        <div className="flex items-start gap-4">
+                          <div className="w-10 h-10 rounded-xl bg-white border border-slate-100 flex items-center justify-center shrink-0 group-hover:bg-primary/5 group-hover:border-primary/10 transition-colors">
+                            <User className="h-5 w-5 text-primary/40 group-hover:text-primary transition-colors" />
+                          </div>
+                          <div className="space-y-1">
+                            <h4 className="font-bold text-navy text-sm sm:text-base leading-tight">
+                              {member.name}
+                            </h4>
+                            {member.role && (
+                              <p className="text-[11px] sm:text-xs text-slate-500 font-semibold leading-relaxed uppercase tracking-wide">
+                                {member.role}
+                              </p>
+                            )}
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 sm:py-20 bg-muted">
-        <div className="container">
+      <section className="py-12 sm:py-20 bg-slate-50 border-t border-slate-100">
+        <div className="container px-4">
           <SectionHeader
-            title="Contact Persons"
-            subtitle="For any queries regarding the conference"
+            title="Convening Support"
+            subtitle="Connect with our organizing team for assistance"
           />
 
-          <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
-            <Card className="shadow-elegant">
-              <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Phone className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="font-semibold text-foreground mb-1">
-                  Dr. S. A. Mithbavkar
-                </h3>
-                <p className="text-sm text-muted-foreground mb-3">
-                  Assistant Professor, Department of Computer Engineering
-                </p>
-                <a
-                  href="tel:7715850099"
-                  className="inline-flex items-center gap-2 text-primary font-medium hover:underline"
-                >
-                  <Phone className="h-4 w-4" />
-                  7715850099
-                </a>
-              </CardContent>
-            </Card>
-
-            <Card className="shadow-elegant">
-              <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Phone className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="font-semibold text-foreground mb-1">
-                  Dr. J. R. Nandwalkar
-                </h3>
-                <p className="text-sm text-muted-foreground mb-3">
-                  Assistant Professor, Department of Computer Engineering
-                </p>
-                <a
-                  href="tel:9833373994"
-                  className="inline-flex items-center gap-2 text-primary font-medium hover:underline"
-                >
-                  <Phone className="h-4 w-4" />
-                  9833373994
-                </a>
-              </CardContent>
-            </Card>
+          <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto mt-8 sm:mt-12">
+            {[
+              {
+                name: "Dr. S. A. Mithbavkar",
+                role: "Assistant Professor, Dept. of Computer Engineering",
+                phone: "7715850099"
+              },
+              {
+                name: "Dr. J. R. Nandwalkar",
+                role: "Assistant Professor, Dept. of Computer Engineering",
+                phone: "9833373994"
+              }
+            ].map((contact, i) => (
+              <Card key={i} className="shadow-elegant border-none rounded-3xl overflow-hidden hover:scale-[1.02] transition-transform">
+                <CardContent className="p-8 sm:p-10 text-center bg-white">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-6 bg-navy/5 rounded-full flex items-center justify-center group">
+                    <User className="h-8 w-8 sm:h-10 sm:w-10 text-navy/20 group-hover:text-navy transition-colors" />
+                  </div>
+                  <h3 className="font-heading text-lg sm:text-xl font-bold text-navy mb-2">
+                    {contact.name}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-500 font-medium mb-8 leading-relaxed px-4">
+                    {contact.role}
+                  </p>
+                  <a
+                    href={`tel:${contact.phone}`}
+                    className="inline-flex items-center gap-3 px-6 py-3 bg-primary text-white rounded-full font-bold text-xs sm:text-sm uppercase tracking-widest shadow-lg shadow-primary/20 hover:bg-navy transition-all"
+                  >
+                    <Phone className="h-4 w-4" />
+                    +91 {contact.phone}
+                  </a>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>

@@ -15,7 +15,7 @@ export const SectionHeader = ({
 }: SectionHeaderProps) => {
   return (
     <div className={cn(centered && "text-center", "mb-8 sm:mb-12", className)}>
-      <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3">
+      <h2 className="font-heading text-xl sm:text-2xl md:text-3xl font-bold text-navy mb-3">
         {title}
       </h2>
       {subtitle && (

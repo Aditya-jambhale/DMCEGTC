@@ -3,243 +3,201 @@ import { Layout } from "@/components/Layout";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { ConferenceTracks } from "@/components/ConferenceTracks";
 import {
-  Cpu,
-  Radio,
   FileText,
   CheckCircle,
-  ExternalLink,
+  Download,
   ArrowRight,
+  BookOpen,
+  Search,
+  Award,
+  ShieldCheck,
+  Dot
 } from "lucide-react";
 
 const CallForPapers = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bg-gradient-hero text-primary-foreground py-16 sm:py-20">
-        <div className="container">
+      <section className="bg-navy py-10 sm:py-14 md:py-16 text-white border-b border-white/10">
+        <div className="container px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+            <h1 className="font-heading text-2xl sm:text-3xl font-extrabold mb-3 sm:mb-4 uppercase tracking-tighter">
               Call for Papers
             </h1>
-            <p className="text-primary-foreground/80 text-lg mb-6">
-              Submit your innovative research for DMCE-GTC 2026
+            <p className="text-white/60 text-xs sm:text-sm md:text-base max-w-xl mx-auto font-medium">
+              Join the convergence of global research. Submit your innovative work for presentation and publication.
             </p>
-            <div className="inline-block px-4 py-2 bg-gold/20 rounded-full">
-              <span className="text-gold font-semibold">
-                Conference Dates: 28–29 April 2026
-              </span>
+          </div>
+        </div>
+      </section>
+
+      {/* Official Invitation Section */}
+      <section className="py-12 sm:py-16 bg-white border-b border-slate-50">
+        <div className="container px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary rounded-full mb-6">
+              <ShieldCheck size={14} />
+              <span className="text-[10px] font-black uppercase tracking-widest">Official Invitation</span>
             </div>
+            <p className="text-slate-600 text-base sm:text-lg leading-relaxed font-medium mb-6">
+              The Department of Computer Engineering at <span className="font-bold text-navy">Datta Meghe College of Engineering (DMCE)</span>, Airoli, Navi Mumbai, cordially invites research papers for:
+            </p>
+            <h2 className="font-heading text-lg sm:text-xl md:text-2xl font-black text-navy uppercase tracking-tighter max-w-2xl mx-auto leading-tight">
+              Global Tech Convergence: International Conference on Computing and IT Advancements 2026
+            </h2>
+            <p className="text-secondary font-black text-sm sm:text-base mt-3 uppercase tracking-[0.2em]">
+              (DMCE-GTC 2026)
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Introduction */}
-      <section className="py-16 sm:py-20 bg-background">
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <Card className="shadow-elegant mb-12">
-              <CardContent className="p-6 sm:p-10">
-                <p className="text-foreground leading-relaxed text-base sm:text-lg mb-4">
-                  Department of Computer Engineering of{" "}
-                  <span className="font-semibold">
-                    Datta Meghe College of Engineering (DMCE)
-                  </span>
-                  , Airoli, Navi Mumbai (NAAC 'A' Grade | NBA Accredited (Civil Engg. & Chem Engg.) |
-                  Affiliated to University of Mumbai) invites research papers for
-                </p>
-                <p className="text-xl sm:text-2xl font-heading font-bold text-primary text-center">
-                  Global Tech Convergence: International Conference on Computing
-                  and IT Advancements 2026
-                </p>
-                <p className="text-center text-secondary font-semibold mt-2">
-                  (DMCE-GTC 2026)
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+      {/* Conference Tracks (Reusable Component) */}
+      <ConferenceTracks />
 
-      {/* Conference Tracks */}
-      <section className="py-16 sm:py-20 bg-muted">
-        <div className="container">
-          <SectionHeader
-            title="Conference Tracks"
-            subtitle="Choose from two exciting research tracks"
-          />
+      {/* Guidelines & Template Section */}
+      <section className="py-12 sm:py-20 bg-slate-50">
+        <div className="container px-4">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 max-w-6xl mx-auto">
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <Card className="shadow-elegant border-l-4 border-l-primary">
-              <CardContent className="p-6 sm:p-8">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="p-3 bg-primary/10 rounded-lg">
-                    <Cpu className="h-7 w-7 text-primary" />
+            {/* Submission Guidelines */}
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <h2 className="text-2xl font-black text-navy uppercase tracking-tighter flex items-center gap-4">
+                  Submission Guidelines
+                  <div className="h-1 flex-1 bg-slate-200 rounded-full" />
+                </h2>
+                <p className="text-slate-500 text-sm font-medium">Please adhere to the following standards for your manuscript.</p>
+              </div>
+
+              <div className="space-y-4">
+                {[
+                  "Original and unpublished research work only.",
+                  "Papers must follow the standard conference template.",
+                  "All figures, tables, and equations must be high resolution.",
+                  "Proper referencing in designated format is mandatory.",
+                  "Similarity index must be within acceptable limits (max 15-20%)."
+                ].map((text, i) => (
+                  <div key={i} className="flex gap-4 group">
+                    <Dot className="h-6 w-6 text-primary shrink-0 -mt-1 group-hover:scale-150 transition-transform" />
+                    <p className="text-sm text-slate-600 leading-relaxed font-semibold">
+                      {text}
+                    </p>
                   </div>
-                  <div>
-                    <span className="text-sm font-medium text-secondary">
-                      Track 1
-                    </span>
-                    <h3 className="font-heading text-xl font-semibold text-foreground">
-                      Recent Trends in Computer Engineering
-                    </h3>
-                  </div>
-                </div>
-                <div className="grid grid-cols-2 gap-2 text-sm">
-                  {[
-                    "AI & ML",
-                    "Deep Learning",
-                    "Data Science",
-                    "Big Data Analytics",
-                    "Cloud Computing",
-                    "IoT",
-                    "Cyber Security",
-                    "Blockchain",
-                    "Computer Networks",
-                    "Software Engineering",
-                    "Web & Mobile Tech",
-                    "Computer Vision",
-                    "NLP",
-                    "HCI",
-                    "Green Computing",
-                    "Smart Systems",
-                  ].map((topic) => (
-                    <div
-                      key={topic}
-                      className="flex items-center gap-1.5 text-muted-foreground"
-                    >
-                      <CheckCircle className="h-3.5 w-3.5 text-primary flex-shrink-0" />
-                      <span>{topic}</span>
+                ))}
+              </div>
+
+              <div className="pt-6">
+                <Card className="border-2 border-dashed border-slate-200 bg-white hover:border-primary/40 transition-colors shadow-none rounded-[1.5rem] group cursor-pointer">
+                  <CardContent className="p-6 flex items-center justify-between">
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all">
+                        <Download size={20} />
+                      </div>
+                      <div>
+                        <p className="font-bold text-navy group-hover:text-primary transition-colors">Paper Template</p>
+                        <p className="text-xs text-slate-400 font-medium">Download latest (.docx / LaTeX)</p>
+                      </div>
                     </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+                    <ArrowRight className="text-slate-200 group-hover:text-primary transition-colors" />
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
 
-            <Card className="shadow-elegant border-l-4 border-l-secondary">
-              <CardContent className="p-6 sm:p-8">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="p-3 bg-secondary/20 rounded-lg">
-                    <Radio className="h-7 w-7 text-secondary" />
-                  </div>
-                  <div>
-                    <span className="text-sm font-medium text-primary">
-                      Track 2
-                    </span>
-                    <h3 className="font-heading text-xl font-semibold text-foreground">
-                      Recent Trends in Electronics Engineering
-                    </h3>
-                  </div>
-                </div>
-                <div className="grid grid-cols-2 gap-2 text-sm">
-                  {[
-                    "Communication Systems",
-                    "Signal Processing",
-                    "VLSI & Embedded Systems",
-                    "Robotics & Automation",
-                    "Sensors & Instrumentation",
-                    "Control Systems",
-                    "Power Electronics",
-                    "Smart & Intelligent Devices",
-                  ].map((topic) => (
-                    <div
-                      key={topic}
-                      className="flex items-center gap-1.5 text-muted-foreground"
-                    >
-                      <CheckCircle className="h-3.5 w-3.5 text-secondary flex-shrink-0" />
-                      <span>{topic}</span>
+            {/* Publication Section */}
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <h2 className="text-2xl font-black text-navy uppercase tracking-tighter flex items-center gap-4">
+                  Publication Opportunities
+                  <div className="h-1 flex-1 bg-slate-200 rounded-full" />
+                </h2>
+                <p className="text-slate-500 text-sm font-medium">Selected works gain international exposure.</p>
+              </div>
+
+              <div className="grid gap-4">
+                <div className="p-5 bg-white border border-slate-100 rounded-2xl shadow-sm group hover:shadow-md transition-all">
+                  <div className="flex gap-4">
+                    <div className="w-10 h-10 rounded-xl bg-navy/5 flex items-center justify-center shrink-0">
+                      <BookOpen size={20} className="text-navy" />
                     </div>
-                  ))}
+                    <div>
+                      <h4 className="font-bold text-navy text-sm mb-1">Conference Proceedings</h4>
+                      <p className="text-xs text-slate-500 leading-relaxed font-medium">Accepted and presented papers will be included in the official proceedings.</p>
+                    </div>
+                  </div>
                 </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+                <div className="p-5 bg-white border border-slate-100 rounded-2xl shadow-sm group hover:shadow-md transition-all border-l-4 border-l-secondary">
+                  <div className="flex gap-4">
+                    <div className="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center shrink-0">
+                      <Award size={20} className="text-secondary" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-navy text-sm mb-1">WoS Indexed Journals</h4>
+                      <p className="text-xs text-slate-500 leading-relaxed font-medium">High-quality papers will be recommended for publication in Web of Science indexed journals.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-      {/* Submission & Publication */}
-      <section className="py-16 sm:py-20 bg-background">
-        <div className="container">
-          <SectionHeader
-            title="Paper Submission & Publication"
-            subtitle="Guidelines for submitting your research"
-          />
+              <div className="p-5 bg-navy text-white/90 rounded-2xl">
+                <p className="text-[10px] font-black uppercase tracking-widest text-[#FFD700] mb-2">Review Process</p>
+                <div className="flex justify-between items-center gap-4">
+                  <div className="text-center flex-1">
+                    <div className="text-lg font-black leading-none">01</div>
+                    <div className="text-[8px] uppercase tracking-tighter mt-1">Submission</div>
+                  </div>
+                  <div className="h-px bg-white/10 flex-1" />
+                  <div className="text-center flex-1">
+                    <div className="text-lg font-black leading-none text-[#FFD700]">02</div>
+                    <div className="text-[8px] uppercase tracking-tighter mt-1 text-[#FFD700]">Peer Review</div>
+                  </div>
+                  <div className="h-px bg-white/10 flex-1" />
+                  <div className="text-center flex-1">
+                    <div className="text-lg font-black leading-none">03</div>
+                    <div className="text-[8px] uppercase tracking-tighter mt-1">Resolution</div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-          <div className="max-w-3xl mx-auto">
-            <Card className="shadow-elegant">
-              <CardContent className="p-6 sm:p-8">
-                <ul className="space-y-4">
-                  <li className="flex items-start gap-3">
-                    <FileText className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-foreground">
-                      Original, unpublished research papers are invited
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-foreground">
-                      All papers will undergo peer review
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-foreground">
-                      Accepted and presented papers will be published in the{" "}
-                      <span className="font-semibold">Conference Proceedings</span>
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
-                    <span className="text-foreground">
-                      Selected best papers will be forwarded to a{" "}
-                      <span className="font-semibold text-secondary">
-                        Web of Science indexed
-                      </span>{" "}
-                      peer-reviewed journal
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3 text-muted-foreground text-sm">
-                    <span className="ml-8">
-                      Journal acceptance is subject to journal norms; additional
-                      publication charges, if any, will be borne by authors
-                    </span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 sm:py-20 bg-gradient-hero text-primary-foreground">
-        <div className="container text-center">
-          <h2 className="font-heading text-2xl sm:text-3xl font-bold mb-4">
-            Ready to Submit Your Paper?
-          </h2>
-          <p className="text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-            Check our submission guidelines and important dates before submitting
-            your research paper.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              asChild
-              size="lg"
-              className="bg-gold hover:bg-gold-dark text-secondary-foreground font-semibold"
-            >
-              <Link to="/paper-submission">
-                Submission Guidelines
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
-            >
-              <Link to="/important-dates">View Important Dates</Link>
-            </Button>
+      <section className="py-12 sm:py-20 bg-white">
+        <div className="container px-4 text-center">
+          <div className="max-w-4xl mx-auto p-12 bg-slate-50 rounded-[3rem] border border-slate-100 relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -mr-32 -mt-32" />
+            <h2 className="font-heading text-xl sm:text-2xl font-black text-navy uppercase tracking-tighter mb-4 relative z-10">
+              Submit Your Manuscript
+            </h2>
+            <p className="text-slate-500 text-sm sm:text-base max-w-xl mx-auto mb-10 relative z-10 font-medium">
+              Be a part of DMCE-GTC 2026. Every submission is treated with rigorous academic integrity and expert oversight.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
+              <Button
+                asChild
+                size="lg"
+                className="bg-primary hover:bg-navy text-white font-black text-xs uppercase tracking-[0.2em] rounded-full px-10"
+              >
+                <Link to="/registration">
+                  Register Now
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="border-slate-200 text-slate-600 hover:bg-white hover:border-primary/20 rounded-full font-black text-xs uppercase tracking-[0.2em] px-10"
+              >
+                <Link to="/important-dates">Critical Dates</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>

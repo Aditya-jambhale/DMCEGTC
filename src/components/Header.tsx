@@ -11,12 +11,12 @@ import csiLogo from "@/assets/csi-logo.png";
 const navItems = [
   { name: "Home", path: "/" },
   { name: "About", path: "/about" },
-  { name: "Call for Papers", path: "/call-for-papers" },
+  { name: "Call for Papers", path: "/cfp" },
   { name: "Important Dates", path: "/important-dates" },
   { name: "Committees", path: "/committees" },
   { name: "Speakers", path: "/speakers" },
   { name: "Registration", path: "/registration" },
-  { name: "Paper Submission", path: "/paper-submission" },
+  // { name: "Paper Submission", path: "/paper-submission" },
   { name: "Publication", path: "/publication" },
 ];
 
@@ -27,15 +27,15 @@ export const Header = () => {
   return (
     <header className="relative  z-50 w-full border-b border-border bg-white/80 backdrop-blur-md transition-all duration-300">
       {/* Top bar with centered DMCE logo */}
-      <div className="container flex h-auto min-h-[80px] items-center justify-center border-b border-border/40 py-4 bg-gradient-to-b from-navy/[0.03] to-transparent">
-        <Link to="/" className="flex flex-col md:flex-row items-center gap-3 md:gap-6 group transition-all duration-300 hover:scale-[1.01] active:scale-95 text-center md:text-left">
+      <div className="container flex h-auto min-h-[80px] items-center justify-center border-b border-border/40 py-4 bg-gradient-to-b from-navy/[0.02] to-transparent">
+        <Link to="/" className="flex flex-col md:flex-row items-center gap-3 md:gap-8 group transition-all duration-500 hover:scale-[1.01] active:scale-95 text-center md:text-left">
           <div className="relative">
-            <img src={dmceLogo} alt="DMCE Logo" className="h-14 md:h-20 w-auto drop-shadow-md transition-transform duration-500 group-hover:scale-110" />
-            <div className="absolute -inset-2 bg-navy/5 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
+            <img src={dmceLogo} alt="DMCE Logo" className="h-14 md:h-24 w-auto drop-shadow-xl transition-transform duration-700 group-hover:scale-110" />
+            <div className="absolute -inset-4 bg-secondary/5 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
           </div>
-          <div className="flex flex-col items-center md:items-start">
-            <h1 className='text-[8px] md:text-xs font-bold text-gray-500 uppercase tracking-[0.2em] mb-0.5 px-1 py-0.5 rounded'>Nagar Yuwak Shikshan Sanstha, Airoli's</h1>
-            <h2 className="text-lg md:text-3xl lg:text-4xl font-black leading-tight uppercase tracking-tight ">
+          <div className="flex flex-col items-center md:items-start max-w-2xl">
+            <h1 className='text-[9px] md:text-[11px] font-bold text-muted-foreground uppercase tracking-[0.3em] mb-1.5 transition-colors group-hover:text-primary'>Nagar Yuwak Shikshan Sanstha, Airoli's</h1>
+            <h2 className="text-xl md:text-3xl font-extrabold leading-tight uppercase tracking-tighter text-navy group-hover:text-primary transition-colors">
               Datta Meghe College of Engineering
             </h2>
           </div>
@@ -68,7 +68,7 @@ export const Header = () => {
               >
                 {item.name}
                 {isActive && (
-                  <span className="absolute bottom-0 left-0 h-0.5 w-full bg-gradient-to-r from-primary to-accent rounded-full animate-in fade-in slide-in-from-bottom-1 duration-300" />
+                  <span className="absolute bottom-0 left-0 h-0.5 w-full bg-secondary rounded-full animate-in fade-in slide-in-from-bottom-1 duration-300" />
                 )}
               </Link>
             );

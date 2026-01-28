@@ -31,12 +31,12 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
-            <Route path="/call-for-papers" element={<CallForPapers />} />
+            <Route path="/cfp" element={<CallForPapers />} />
             <Route path="/important-dates" element={<ImportantDates />} />
             <Route path="/committees" element={<Committees />} />
             <Route path="/speakers" element={<Speakers />} />
             <Route path="/registration" element={<Registration />} />
-            <Route path="/paper-submission" element={<PaperSubmission />} />
+            {/* <Route path="/paper-submission" element={<PaperSubmission />} /> */}
             <Route path="/publication" element={<Publication />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

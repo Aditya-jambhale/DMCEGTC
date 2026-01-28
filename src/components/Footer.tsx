@@ -1,117 +1,142 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Globe, ExternalLink, User } from "lucide-react";
+// import dmceLogo from "@/assets/website-dmce.png";
+import confLogo from "@/assets/conference-logo.png";
 
 export const Footer = () => {
   return (
-    <footer className="bg-navy text-primary-foreground">
-      <div className="container py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* About Section */}
-          <div>
-            <h3 className="font-heading text-xl font-bold mb-4 text-gold">
-              DMCE-GTC 2026
-            </h3>
-            <p className="text-sm text-primary-foreground/80 leading-relaxed">
-              Global Tech Convergence: International Conference on Computing and
-              IT Advancements 2026
-            </p>
-            <p className="text-sm text-primary-foreground/80 mt-2">
-              In association with Computer Society of India (CSI) Student Branch
-            </p>
-          </div>
+    <footer className="bg-navy text-white pt-16 relative overflow-hidden">
+      {/* Background Decoration */}
+      <div className="absolute top-0 left-1/4 w-96 h-96  rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-[100px] pointer-events-none" />
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="font-heading text-lg font-semibold mb-4 text-gold">
-              Quick Links
-            </h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link
-                  to="/call-for-papers"
-                  className="text-primary-foreground/80 hover:text-gold transition-colors"
-                >
-                  Call for Papers
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/important-dates"
-                  className="text-primary-foreground/80 hover:text-gold transition-colors"
-                >
-                  Important Dates
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/registration"
-                  className="text-primary-foreground/80 hover:text-gold transition-colors"
-                >
-                  Registration
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/paper-submission"
-                  className="text-primary-foreground/80 hover:text-gold transition-colors"
-                >
-                  Paper Submission
-                </Link>
-              </li>
-            </ul>
-          </div>
+      <div className="container relative z-10 pb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-16">
 
-          {/* Contact Info */}
-          <div>
-            <h4 className="font-heading text-lg font-semibold mb-4 text-gold">
-              Contact Us
-            </h4>
-            <ul className="space-y-3 text-sm">
-              <li className="flex items-start gap-2">
-                <Phone className="h-4 w-4 mt-0.5 text-gold" />
-                <div>
-                  <p className="text-primary-foreground/80">Dr. S. A. Mithbavkar</p>
-                  <p className="text-primary-foreground/60">7715850099</p>
-                </div>
-              </li>
-              <li className="flex items-start gap-2">
-                <Phone className="h-4 w-4 mt-0.5 text-gold" />
-                <div>
-                  <p className="text-primary-foreground/80">Dr. J. R. Nandwalkar</p>
-                  <p className="text-primary-foreground/60">9833373994</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-
-          {/* Venue */}
-          <div>
-            <h4 className="font-heading text-lg font-semibold mb-4 text-gold">
-              Venue
-            </h4>
-            <div className="flex items-start gap-2 text-sm">
-              <MapPin className="h-4 w-4 mt-0.5 text-gold flex-shrink-0" />
-              <div className="text-primary-foreground/80">
-                <p className="font-medium">Datta Meghe College of Engineering</p>
-                <p>Airoli, Navi Mumbai</p>
-                <p className="text-primary-foreground/60 mt-1">
-                  NAAC 'A' Grade | NBA Accredited (Civil Engg. & Chem Engg.)
-                </p>
-                <p className="text-primary-foreground/60">
-                  Affiliated to University of Mumbai
+          {/* Logo & About Section */}
+          <div className="lg:col-span-5 space-y-8">
+            <div className="flex items-center gap-4 group">
+              <div className="relative">
+                <div className="absolute inset-0 bg-[#FFD700] rounded-full blur-md opacity-20 group-hover:opacity-40 transition-opacity" />
+                <img
+                  src={confLogo}
+                  alt="DMCE-GTC 2026"
+                  className="h-20 w-auto bg-white p-2 rounded-full relative z-10 "
+                />
+              </div>
+              <div>
+                <h3 className="font-heading text-xl font-extrabold text-[#FFD700] tracking-tight mb-0.5">
+                  DMCE-GTC 2026
+                </h3>
+                <p className="text-[11px] uppercase tracking-[0.2em] font-bold text-white/50">
+                  Academic Excellence
                 </p>
               </div>
             </div>
+            <p className="text-[15px] text-white/70 leading-relaxed font-medium max-w-md">
+              DMCE-GTC 2026 is an international platform for researchers, academicians, industry professionals, and students to present innovative research, exchange knowledge, and discuss emerging technologies in Computing and IT Advancements, with a focus on interdisciplinary convergence and industry relevance. This conference is associated with Computer Society of India (CSI) student branch
+            </p>
+            <div className="flex gap-4">
+              {/* Optional Social Icons could go here */}
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div className="lg:col-span-3">
+            <h4 className="font-heading text-lg font-bold mb-8 text-[#FFD700] relative inline-block uppercase tracking-widest">
+              Quick Links
+              <span className="absolute -bottom-3 left-0 w-12 h-0.5 bg-[#FFD700] rounded-full" />
+              <span className="absolute -bottom-3 left-14 w-2 h-0.5 bg-[#FFD700]/30 rounded-full" />
+            </h4>
+            <div className="flex flex-col gap-4">
+              {[
+                { name: "Home", path: "/" },
+                { name: "About", path: "/about" },
+                { name: "Call for Papers", path: "/cfp" },
+                { name: "Registration", path: "/registration" },
+                { name: "Committees", path: "/committees" },
+                { name: "Speakers", path: "/speakers" },
+                // { name: "Exhibition", path: "#" },
+                // { name: "Reach Us", path: "#" }
+              ].map((link) => (
+                <Link
+                  key={link.name}
+                  to={link.path}
+                  className="text-[15px] text-white/60 hover:text-[#FFD700] flex items-center gap-3 group transition-all duration-300 hover:translate-x-2"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#FFD700] opacity-50 group-hover:opacity-100 group-hover:scale-125 transition-all shadow-[0_0_8px_#FFD700]" />
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Contact Section */}
+          <div className="lg:col-span-4">
+            <h4 className="font-heading text-lg font-bold mb-8 text-[#FFD700] relative inline-block uppercase tracking-widest">
+              Contact Us
+              <span className="absolute -bottom-3 left-0 w-12 h-0.5 bg-[#FFD700] rounded-full" />
+              <span className="absolute -bottom-3 left-14 w-2 h-0.5 bg-[#FFD700]/30 rounded-full" />
+            </h4>
+            <ul className="space-y-8">
+              <li className="flex items-start gap-5 group">
+                <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-[#FFD700]/10 group-hover:border-[#FFD700]/30 transition-all duration-300 shadow-xl">
+                  <User className="h-5 w-5 text-[#FFD700]" />
+                </div>
+                <div>
+                  <p className="text-[10px] text-white/40 uppercase font-black tracking-[0.15em] mb-1.5">Dr. S. A. Mithbavkar</p>
+                  <p className="text-[15px] font-bold text-white/90 group-hover:text-white transition-colors">+91 7715850099</p>
+                  <p className="text-[11px] text-white/50 leading-tight">Assistant Professor, Dept of Comp. Engg.</p>
+                </div>
+              </li>
+              <li className="flex items-start gap-5 group">
+                <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-[#FFD700]/10 group-hover:border-[#FFD700]/30 transition-all duration-300 shadow-xl">
+                  <User className="h-5 w-5 text-[#FFD700]" />
+                </div>
+                <div>
+                  <p className="text-[10px] text-white/40 uppercase font-black tracking-[0.15em] mb-1.5">Dr. J. R. Nandwalkar</p>
+                  <p className="text-[15px] font-bold text-white/90 group-hover:text-white transition-colors">+91 9833373994</p>
+                  <p className="text-[11px] text-white/50 leading-tight">Assistant Professor, Dept of Comp. Engg.</p>
+                </div>
+              </li>
+              <li className="flex items-start gap-5 group">
+                <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-[#FFD700]/10 group-hover:border-[#FFD700]/30 transition-all duration-300 shadow-xl">
+                  <MapPin className="h-5 w-5 text-[#FFD700]" />
+                </div>
+                <div>
+                  <p className="text-[10px] text-white/40 uppercase font-black tracking-[0.15em] mb-1.5">Official Venue</p>
+                  <p className="text-[15px] font-bold leading-relaxed text-white/90 group-hover:text-white transition-colors">
+                    Plot No. 98, Sector-3, Airoli, Navi Mumbai 400708, Maharashtra, India
+                  </p>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
+      </div>
 
-        <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-sm text-primary-foreground/60">
-          <p>
-            © 2026 DMCE-GTC. Department of Computer Engineering, DMCE Airoli.
-            All rights reserved.
-          </p>
+      {/* Modern Copyright Bar */}
+      <div className="relative border-t border-white/5 bg-[#FFD700] py-8 text-[#0B0D17]">
+        <div className="container flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
+            <p className="text-sm font-black uppercase tracking-wider">
+              Copyright © 2026 CSI CATT DMCE
+            </p>
+            <span className="hidden md:block w-px h-4 bg-[#0B0D17]/20" />
+            <p className="text-sm font-bold opacity-80">All rights reserved</p>
+          </div>
+          <div className="flex items-center gap-8 text-sm font-black uppercase tracking-wider">
+            <div className="flex items-center gap-3 group cursor-default">
+              <span className="text-[10px] font-bold opacity-60">Engineered by</span>
+              <span className="relative">
+                CSI CATT DMCE
+                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-[#0B0D17] scale-x-0 group-hover:scale-x-100 transition-transform origin-right group-hover:origin-left duration-300" />
+              </span>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
   );
 };
+

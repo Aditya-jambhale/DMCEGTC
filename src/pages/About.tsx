@@ -1,289 +1,241 @@
 import { Layout } from "@/components/Layout";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card, CardContent } from "@/components/ui/card";
-import { Cpu, Radio, Target, Users, Lightbulb, Globe } from "lucide-react";
+import { Reveal } from "@/components/Reveal";
+import {
+  Building2,
+  GraduationCap,
+  Info,
+  Users,
+  Trophy,
+  ShieldCheck,
+  Network
+} from "lucide-react";
+import { ConferenceTracks } from "@/components/ConferenceTracks";
+import dmceLogo from "@/assets/website-dmce.png";
 
 const About = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bg-gradient-hero text-primary-foreground py-16 sm:py-20">
-        <div className="container">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-              About the Conference
-            </h1>
-            <p className="text-primary-foreground/80 text-lg">
-              DMCE-GTC 2026: A Premier International Platform for Research and
-              Innovation
-            </p>
+      <section id="about-hero" className="bg-gradient-hero text-primary-foreground py-16 sm:py-20 md:py-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-navy/20 pointer-events-none" />
+        <div className="container relative z-10 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <Reveal delay={100}>
+              <h1 className="font-heading text-2xl sm:text-3xl md:text-4xl font-extrabold mb-3 sm:mb-4">
+                About DMCE-GTC 2026
+              </h1>
+            </Reveal>
+            <Reveal delay={300}>
+              <p className="text-sm sm:text-base md:text-lg text-primary-foreground/90 font-medium max-w-xl mx-auto tracking-tight">
+                A Premier International Platform for Research, Innovation, and Global Tech Convergence.
+              </p>
+            </Reveal>
           </div>
         </div>
       </section>
 
-      {/* About Content */}
-      <section className="py-16 sm:py-20 bg-background">
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <Card className="shadow-elegant mb-12">
-              <CardContent className="p-6 sm:p-10">
-                <p className="text-foreground leading-relaxed text-base sm:text-lg mb-6">
-                  <span className="font-semibold text-primary">DMCE-GTC 2026</span>{" "}
-                  is an international platform for researchers, academicians,
-                  industry professionals, and students to present innovative
-                  research, exchange knowledge, and discuss emerging technologies
-                  in Computing and IT Advancements, with a focus on
-                  interdisciplinary convergence and industry relevance.
+      {/* About the Conference Section */}
+      <section className="py-12 sm:py-20 bg-background relative">
+        <div className="container px-4">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16 sm:mb-24">
+            <Reveal className="space-y-4 sm:space-y-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-primary/10 text-primary rounded-full mb-1">
+                <Info size={14} className="font-bold" />
+                <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider">The Main Event</span>
+              </div>
+              <h2 className="font-heading text-xl sm:text-2xl font-extrabold text-navy">
+                About the Conference
+              </h2>
+              <div className="space-y-3 sm:space-y-4 text-slate-600 text-sm sm:text-base leading-relaxed">
+                <p>
+                  The Department of Computer Engineering at <span className="font-bold text-primary">Datta Meghe College of Engineering</span> is proud to organize the <span className="font-bold underline decoration-secondary/30 underline-offset-4">Global Tech Convergence: International Conference on Computing and IT Advancements 2026 (DMCE-GTC 2026)</span>.
                 </p>
-                <p className="text-foreground leading-relaxed text-base sm:text-lg">
-                  This conference is co-sponsored by{" "}
-                  <span className="font-semibold text-secondary">
-                    Computer Society of India (CSI)
-                  </span>{" "}
-                  Student Chapter, bringing together the brightest minds from
-                  academia and industry to share their latest findings and
-                  innovations.
+                <p>
+                  Scheduled for <span className="font-semibold text-navy">28th and 29th April 2026</span>, this conference serves as an international platform for researchers, academicians, and industry professionals to exchange knowledge and discuss emerging frontiers in technology.
                 </p>
-              </CardContent>
-            </Card>
+                <div className="flex items-center gap-3 p-3 sm:p-4 bg-secondary/5 border-l-4 border-secondary rounded-r-xl mt-4">
+                  <Network className="text-secondary shrink-0 h-5 w-5" />
+                  <p className="text-xs sm:text-sm font-medium text-navy">
+                    Organized in association with the <span className="font-bold italic">Computer Society of India (CSI)</span> Student Branch.
+                  </p>
+                </div>
+              </div>
+            </Reveal>
+            <Reveal className="relative group mt-8 lg:mt-0" delay={200}>
+              <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-[1.5rem] sm:rounded-[2rem] blur-xl opacity-50 group-hover:opacity-100 transition duration-700" />
+              <Card className="relative bg-white border-slate-200 rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden shadow-elegant">
+                <CardContent className="p-6 sm:p-8 lg:p-10">
+                  <h3 className="text-lg sm:text-xl font-bold text-navy mb-5 sm:mb-6">Key Objectives</h3>
+                  <div className="space-y-5 sm:space-y-6">
+                    {[
+                      { icon: Trophy, title: "Innovation", desc: "Showcasing cutting-edge research in Computing and IT." },
+                      { icon: Users, title: "Collaboration", desc: "Fostering interdisciplinary convergence and academic exchange." },
+                      { icon: ShieldCheck, title: "Relevance", desc: "Bridging the gap between academic findings and industry needs." }
+                    ].map((item, id) => (
+                      <div key={id} className="flex gap-3 sm:gap-4">
+                        <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-slate-50 flex items-center justify-center shrink-0">
+                          <item.icon className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-navy text-xs sm:text-sm">{item.title}</h4>
+                          <p className="text-[11px] sm:text-xs text-slate-500 leading-normal">{item.desc}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </Reveal>
+          </div>
 
-            {/* Objectives */}
-            <div className="mb-12">
-              <SectionHeader
-                title="Conference Objectives"
-                subtitle="What we aim to achieve through DMCE-GTC 2026"
-              />
+          <hr className="border-slate-100 mb-16 sm:mb-24" />
 
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <Card className="shadow-md hover:shadow-lg transition-shadow">
-                  <CardContent className="p-6 text-center">
-                    <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-                      <Target className="h-6 w-6 text-primary" />
-                    </div>
-                    <h3 className="font-semibold text-foreground mb-2">
-                      Innovative Research
-                    </h3>
-                    <p className="text-sm text-muted-foreground">
-                      Present and discuss cutting-edge research in computing and
-                      IT advancements.
+          {/* About Department Section */}
+          <div className="mb-16 sm:mb-24 text-left">
+            <Reveal className="max-w-3xl mb-10 sm:mb-12">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-secondary/10 text-secondary rounded-full mb-3">
+                <GraduationCap size={14} />
+                <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider">Academic Excellence</span>
+              </div>
+              <h2 className="font-heading text-2xl sm:text-3xl font-extrabold text-navy mb-4 sm:mb-6">
+                Department of Computer Engineering
+              </h2>
+              <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+                Established in 1992, the department has grown into a prestigious hub for technical education, now offering UG (intake 180), PG, and Ph.D. programs under the University of Mumbai.
+              </p>
+            </Reveal>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+              <Reveal delay={100}>
+                <Card className="hover:shadow-lg h-full transition-all border-slate-200 rounded-2xl">
+                  <CardContent className="p-6 sm:p-8">
+                    <h4 className="font-bold text-navy mb-3 flex items-center gap-2 text-sm sm:text-base">
+                      <span className="w-2 h-2 rounded-full bg-primary" />
+                      Advanced Infrastructure
+                    </h4>
+                    <p className="text-[13px] sm:text-sm text-slate-500 leading-relaxed">
+                      Well-equipped laboratories specializing in Cloud Computing, Cybersecurity, Advanced Databases, and Network Infrastructure.
                     </p>
                   </CardContent>
                 </Card>
-
-                <Card className="shadow-md hover:shadow-lg transition-shadow">
-                  <CardContent className="p-6 text-center">
-                    <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-                      <Users className="h-6 w-6 text-primary" />
-                    </div>
-                    <h3 className="font-semibold text-foreground mb-2">
-                      Knowledge Exchange
-                    </h3>
-                    <p className="text-sm text-muted-foreground">
-                      Foster collaboration between researchers, academicians, and
-                      industry professionals.
+              </Reveal>
+              <Reveal delay={200}>
+                <Card className="hover:shadow-lg h-full transition-all border-slate-200 rounded-2xl">
+                  <CardContent className="p-6 sm:p-8">
+                    <h4 className="font-bold text-navy mb-3 flex items-center gap-2 text-sm sm:text-base">
+                      <span className="w-2 h-2 rounded-full bg-secondary" />
+                      CATT & CSI Initiatives
+                    </h4>
+                    <p className="text-[13px] sm:text-sm text-slate-500 leading-relaxed">
+                      The department actively conducts Skill Development Programs through CATT and organizes "Technitude", our flagship annual technical fest.
                     </p>
                   </CardContent>
                 </Card>
-
-                <Card className="shadow-md hover:shadow-lg transition-shadow">
-                  <CardContent className="p-6 text-center">
-                    <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-                      <Lightbulb className="h-6 w-6 text-primary" />
-                    </div>
-                    <h3 className="font-semibold text-foreground mb-2">
-                      Emerging Technologies
-                    </h3>
-                    <p className="text-sm text-muted-foreground">
-                      Explore and discuss the latest trends and technologies
-                      shaping the future.
+              </Reveal>
+              <Reveal delay={300} className="sm:col-span-2 lg:col-span-1">
+                <Card className="hover:shadow-lg h-full transition-all border-slate-200 rounded-2xl">
+                  <CardContent className="p-6 sm:p-8">
+                    <h4 className="font-bold text-navy mb-3 flex items-center gap-2 text-sm sm:text-base">
+                      <span className="w-2 h-2 rounded-full bg-primary" />
+                      Outcome-Based Education
+                    </h4>
+                    <p className="text-[13px] sm:text-sm text-slate-500 leading-relaxed">
+                      Consistently producing high-performing students who secure prestigious placements and higher education opportunities globally.
                     </p>
                   </CardContent>
                 </Card>
+              </Reveal>
+            </div>
+          </div>
 
-                <Card className="shadow-md hover:shadow-lg transition-shadow">
-                  <CardContent className="p-6 text-center">
-                    <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-                      <Globe className="h-6 w-6 text-primary" />
-                    </div>
-                    <h3 className="font-semibold text-foreground mb-2">
-                      Industry Relevance
-                    </h3>
-                    <p className="text-sm text-muted-foreground">
-                      Bridge the gap between academic research and industry
-                      applications.
-                    </p>
-                  </CardContent>
-                </Card>
+          <hr className="border-slate-100 mb-16 sm:mb-24" />
 
-                <Card className="shadow-md hover:shadow-lg transition-shadow sm:col-span-2 lg:col-span-2">
-                  <CardContent className="p-6 text-center">
-                    <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-secondary/20 flex items-center justify-center">
-                      <Users className="h-6 w-6 text-secondary" />
-                    </div>
-                    <h3 className="font-semibold text-foreground mb-2">
-                      Interdisciplinary Convergence
-                    </h3>
-                    <p className="text-sm text-muted-foreground">
-                      Bring together experts from Computer Engineering and
-                      Electronics Engineering for cross-domain collaboration.
+          {/* About DMCE Section */}
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start mb-16 sm:mb-24">
+            <Reveal className="lg:col-span-4 lg:sticky lg:top-24">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-navy/10 text-navy rounded-full mb-3">
+                <Building2 size={14} />
+                <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider">Our Foundation</span>
+              </div>
+              <h2 className="font-heading text-xl sm:text-2xl font-extrabold text-navy">
+                About DMCE
+              </h2>
+              <p className="mt-4 text-slate-500 italic text-sm sm:text-base">
+                "A Pioneer in Engineering Education since 1988."
+              </p>
+            </Reveal>
+            <div className="lg:col-span-8 space-y-6 sm:space-y-8">
+              <Reveal className="bg-slate-50 p-6 sm:p-8 rounded-[1.5rem] sm:rounded-[2rem] border border-slate-200">
+                <p className="text-slate-700 leading-relaxed text-sm sm:text-base">
+                  Datta Meghe College of Engineering (DMCE) is a leading private engineering institution managed by Nagar Yuwak Shikshan Sanstha (NYSS) in Navi Mumbai. Accredited by <span className="font-bold">NAAC, AICTE</span>, and <span className="font-bold">DTE</span>, it has established itself as a hub for excellence, blending academic rigor with industry relevance.
+                </p>
+              </Reveal>
+              <div className="grid sm:grid-cols-2 gap-6 sm:gap-8">
+                {[
+                  { title: "Diverse Programs", desc: "Offering B.E., M.E., and Ph.D. programs in Civil, Mechanical, Computer, Electronics & Telecommunication, Chemical, IT, and AI&DS." },
+                  { title: "Holistic Development", desc: "Focusing on ethical leadership and societal values through the UHV Cell, nurturing professionals who are ready for the future." },
+                  { title: "Industry Ties", desc: "Strong connections and an expansive alumni network ensure students gain practical expertise and global career opportunities." },
+                  { title: "Modern Campus", desc: "Features advanced laboratories, a vast library, and collaborative spaces for research and industry engagement." }
+                ].map((item, i) => (
+                  <Reveal key={i} delay={i * 100} className="space-y-2 sm:space-y-3">
+                    <h4 className="font-bold text-navy uppercase tracking-widest text-[10px] sm:text-xs">{item.title}</h4>
+                    <p className="text-slate-600 text-[13px] sm:text-sm leading-relaxed">
+                      {item.desc}
                     </p>
-                  </CardContent>
-                </Card>
+                  </Reveal>
+                ))}
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Conference Tracks */}
-      <section className="py-16 sm:py-20 bg-muted">
-        <div className="container">
-          <SectionHeader
-            title="Conference Tracks"
-            subtitle="Two exciting tracks covering the latest in technology"
-          />
+      {/* Conference Tracks (Reusable Component) */}
+      <ConferenceTracks />
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <Card className="shadow-elegant border-t-4 border-t-primary">
-              <CardContent className="p-6 sm:p-8">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="p-3 bg-primary/10 rounded-lg">
-                    <Cpu className="h-7 w-7 text-primary" />
-                  </div>
-                  <div>
-                    <span className="text-sm text-muted-foreground">Track 1</span>
-                    <h3 className="font-heading text-xl font-semibold text-foreground">
-                      Recent Trends in Computer Engineering
-                    </h3>
-                  </div>
+      {/* Organizing Institution (Kept as requested) */}
+      <section className="py-12 sm:py-20 bg-slate-50 overflow-hidden">
+        <div className="container px-4">
+          <Reveal>
+            <SectionHeader
+              title="Organized By"
+              subtitle="Department of Computer Engineering"
+            />
+          </Reveal>
+
+          <Reveal delay={200}>
+            <Card className="max-w-2xl mx-auto shadow-elegant border-none rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden">
+              <CardContent className="p-6 sm:p-10 text-center bg-white">
+                <div className="flex justify-center mb-6 relative group">
+                  <div className="absolute -inset-4 bg-primary/5 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <img
+                    src={dmceLogo}
+                    alt="DMCE Logo"
+                    className="h-16 sm:h-20 w-auto relative z-10 drop-shadow-lg transition-transform duration-500 group-hover:scale-110"
+                  />
                 </div>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">•</span>
-                    AI & Machine Learning
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">•</span>
-                    Deep Learning & Data Science
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">•</span>
-                    Big Data Analytics & Cloud Computing
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">•</span>
-                    Internet of Things (IoT)
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">•</span>
-                    Cyber Security & Blockchain
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">•</span>
-                    Computer Networks & Software Engineering
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">•</span>
-                    Web & Mobile Technologies
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">•</span>
-                    Computer Vision & NLP
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">•</span>
-                    Human-Computer Interaction (HCI)
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">•</span>
-                    Green Computing & Smart Systems
-                  </li>
-                </ul>
+                <h3 className="font-heading text-xl sm:text-2xl font-bold text-navy mb-1 sm:mb-2 text-center">
+                  Datta Meghe College of Engineering (DMCE)
+                </h3>
+                <p className="text-base sm:text-lg text-primary font-semibold mb-6 sm:mb-8 text-center">
+                  Airoli, Navi Mumbai
+                </p>
+                <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
+                  {[
+                    { label: "NAAC 'A' Grade", color: "bg-primary/10 text-primary" },
+                    { label: "NBA Accredited (Civil & Chemical)", color: "bg-secondary/20 text-secondary-foreground" },
+                    { label: "University of Mumbai", color: "bg-slate-100 text-slate-600" }
+                  ].map((tag, id) => (
+                    <span key={id} className={`px-4 sm:px-5 py-1.5 rounded-full font-bold text-[9px] sm:text-[10px] uppercase tracking-widest ${tag.color}`}>
+                      {tag.label}
+                    </span>
+                  ))}
+                </div>
               </CardContent>
             </Card>
-
-            <Card className="shadow-elegant border-t-4 border-t-secondary">
-              <CardContent className="p-6 sm:p-8">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="p-3 bg-secondary/20 rounded-lg">
-                    <Radio className="h-7 w-7 text-secondary" />
-                  </div>
-                  <div>
-                    <span className="text-sm text-muted-foreground">Track 2</span>
-                    <h3 className="font-heading text-xl font-semibold text-foreground">
-                      Recent Trends in Electronics Engineering
-                    </h3>
-                  </div>
-                </div>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li className="flex items-start gap-2">
-                    <span className="text-secondary mt-1">•</span>
-                    Communication Systems
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-secondary mt-1">•</span>
-                    Signal Processing
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-secondary mt-1">•</span>
-                    VLSI & Embedded Systems
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-secondary mt-1">•</span>
-                    Robotics & Automation
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-secondary mt-1">•</span>
-                    Sensors & Instrumentation
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-secondary mt-1">•</span>
-                    Control Systems
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-secondary mt-1">•</span>
-                    Power Electronics
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-secondary mt-1">•</span>
-                    Smart & Intelligent Devices
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Organizing Institution */}
-      <section className="py-16 sm:py-20 bg-background">
-        <div className="container">
-          <SectionHeader
-            title="Organized By"
-            subtitle="Department of Computer Engineering"
-          />
-
-          <Card className="max-w-3xl mx-auto shadow-elegant">
-            <CardContent className="p-6 sm:p-10 text-center">
-              <h3 className="font-heading text-2xl font-bold text-foreground mb-2">
-                Datta Meghe College of Engineering (DMCE)
-              </h3>
-              <p className="text-lg text-primary font-medium mb-4">
-                Airoli, Navi Mumbai
-              </p>
-              <div className="flex flex-wrap justify-center gap-3 text-sm">
-                <span className="px-4 py-1.5 bg-primary/10 text-primary rounded-full font-medium">
-                  NAAC 'A' Grade
-                </span>
-                <span className="px-4 py-1.5 bg-secondary/20 text-secondary-foreground rounded-full font-medium">
-                  NBA Accredited (Civil Engg. & Chem Engg.)
-                </span>
-                <span className="px-4 py-1.5 bg-muted text-muted-foreground rounded-full font-medium">
-                  Affiliated to University of Mumbai
-                </span>
-              </div>
-            </CardContent>
-          </Card>
+          </Reveal>
         </div>
       </section>
     </Layout>
