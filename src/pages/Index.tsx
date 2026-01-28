@@ -42,7 +42,7 @@ const Index = () => {
   const quickDates = [
     { label: "Paper Submission Starts", date: "1st Feb 2026" },
     { label: "Final Submission Deadline", date: "27th March 2026" },
-    { label: "Notification Date", date: "9th April 2026" },
+    { label: "Notification of Acceptance", date: "9th April 2026" },
   ];
 
   const highlights = [
