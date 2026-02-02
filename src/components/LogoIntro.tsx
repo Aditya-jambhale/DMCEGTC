@@ -99,7 +99,7 @@ export const LogoIntro = ({ onComplete }: LogoIntroProps) => {
             </div>
             <div className="text-center">
               <h2 className="text-xl md:text-2xl font-black text-[#FFD700] uppercase tracking-tighter mb-1 font-heading">
-                GTC 2026
+                DMCE-GTC 2026
               </h2>
               <p className="text-[10px] md:text-xs text-white/40 font-bold uppercase tracking-[0.2em]">
                 Global Tech Convergence
