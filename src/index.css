@@ -6,8 +6,8 @@
 
 @layer base {
   :root {
-    --font-sans: 'Inter', sans-serif;
-    --font-heading: 'Outfit', sans-serif;
+    --font-sans: 'Source Sans Pro', sans-serif;
+    --font-heading: 'Playfair Display', serif;
 
     --background: 210 40% 98%;
     --foreground: 222 47% 11%;
@@ -116,7 +116,8 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground;
+    font-family: 'Source Sans Pro', sans-serif;
   }
 
   h1,
@@ -125,7 +126,8 @@
   h4,
   h5,
   h6 {
-    @apply font-heading tracking-tight;
+    @apply tracking-tight;
+    font-family: 'Playfair Display', serif;
   }
 }
 

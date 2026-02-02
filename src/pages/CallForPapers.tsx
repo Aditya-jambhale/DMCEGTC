@@ -79,7 +79,7 @@ const CallForPapers = () => {
                   "All figures, tables, and equations must be high resolution.",
                   "Proper referencing in designated format is mandatory.",
                   "Similarity index must be within acceptable limits (max 15-20%).",
-                  "Journal acceptance is subject to journal norms; additional publication charges, if any, will be borne by authors"
+                
                 ].map((text, i) => (
                   <div key={i} className="flex gap-4 group">
                     <Dot className="h-6 w-6 text-primary shrink-0 -mt-1 group-hover:scale-150 transition-transform" />
@@ -139,7 +139,8 @@ const CallForPapers = () => {
                     </div>
                     <div>
                       <h4 className="font-bold text-navy text-sm mb-1">WoS Indexed Journals</h4>
-                      <p className="text-xs text-slate-500 leading-relaxed font-medium">High-quality papers will be recommended for publication in Web of Science indexed journals.</p>
+                      <p className="text-xs text-slate-500 leading-relaxed font-medium">1. High-quality papers will be recommended for publication in Web of Science indexed journals.</p>
+                      <p className="text-xs text-slate-500 leading-relaxed font-medium">2. Journal acceptance is subject to journal norms; additional publication charges, if any, will be borne by authors</p>
                     </div>
                   </div>
                 </div>

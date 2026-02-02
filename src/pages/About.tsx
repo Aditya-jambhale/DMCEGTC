@@ -93,17 +93,17 @@ const About = () => {
           <hr className="border-slate-100 mb-16 sm:mb-24" />
 
           {/* About Department Section */}
-          <div className="mb-16 sm:mb-24 text-center">
-            <Reveal className="max-w-4xl mx-auto mb-12 sm:mb-16">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-secondary/10 text-secondary rounded-full mb-4">
+          <div className="mb-16 sm:mb-24 ">
+            <Reveal className="max-w-8xl mb-12 sm:mb-16">
+              <div className="inline-flex  gap-2 px-3 py-1.5 bg-secondary/10 text-secondary rounded-full mb-4">
                 <GraduationCap size={14} />
                 <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider">Academic Excellence</span>
               </div>
               <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-extrabold text-navy mb-6">
                 Department of Computer Engineering
               </h2>
-              <div className="space-y-4 max-w-4xl mx-auto">
-                <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+              <div className="space-y-4 max-w-8xl">
+                <p className="text-slate-600 text-sm sm:text-base leading-relaxed text-justify">
                   Established in 1992, the Department of Computer Engineering has evolved into a hub of academic excellence, offering Undergraduate, Postgraduate (M.E.), and Ph.D. programs under the University of Mumbai. With modern laboratories in Networking, Cloud Computing, Cluster Computing, Web Engineering, Advanced Databases, Network Infrastructure, and IT Security, the department emphasizes hands-on and research-driven learning.
                 </p>
                 <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
@@ -120,7 +120,7 @@ const About = () => {
                       <span className="w-2 h-2 rounded-full bg-primary" />
                       Advanced Infrastructure
                     </h4>
-                    <p className="text-[13px] sm:text-sm text-slate-500 leading-relaxed">
+                    <p className="text-[13px] sm:text-sm text-slate-500 leading-relaxed text-justify">
                       Well-equipped laboratories specializing in Cloud Computing, Cybersecurity, Advanced Databases, and Network Infrastructure.
                     </p>
                   </CardContent>
@@ -133,7 +133,7 @@ const About = () => {
                       <span className="w-2 h-2 rounded-full bg-secondary" />
                       CATT & CSI Initiatives
                     </h4>
-                    <p className="text-[13px] sm:text-sm text-slate-500 leading-relaxed">
+                    <p className="text-[13px] sm:text-sm text-slate-500 leading-relaxed text-justify">
                       The department actively conducts Skill Development Programs through CATT and organizes "Technitude", our flagship annual technical fest.
                     </p>
                   </CardContent>
@@ -146,7 +146,7 @@ const About = () => {
                       <span className="w-2 h-2 rounded-full bg-primary" />
                       Outcome-Based Education
                     </h4>
-                    <p className="text-[13px] sm:text-sm text-slate-500 leading-relaxed">
+                    <p className="text-[13px] sm:text-sm text-slate-500 leading-relaxed text-justify">
                       Consistently producing high-performing students who secure prestigious placements and higher education opportunities globally.
                     </p>
                   </CardContent>

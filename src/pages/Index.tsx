@@ -66,7 +66,7 @@ const Index = () => {
       <section
         className="relative text-white py-24 sm:py-32 lg:py-40 overflow-hidden bg-navy"
         style={{
-          backgroundImage: `linear-gradient(to bottom, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.8)), url(${heroBg})`,
+          backgroundImage: `linear-gradient(to bottom, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.8)), url(https://images.pexels.com/photos/4940642/pexels-photo-4940642.jpeg)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed'
@@ -341,7 +341,7 @@ const Index = () => {
                   {/* LOCAL PDF PREVIEW */}
                   <div className="relative h-64 max-h-64 w-full bg-black/40 rounded-xl overflow-hidden border border-white/5 shadow-inner">
                     <iframe
-                      src="https://drive.google.com/file/d/1bNetxjDVRVb9dL1XXY7o3jgfIHSwhRZu/preview"
+                      src="https://drive.google.com/file/d/1RrMEavx0cfrFtDD5UnxZmjRpOCjY6r6h/preview"
                       className="w-full h-full border-none"
                       title="Conference Brochure"
                       loading="lazy"
@@ -350,12 +350,12 @@ const Index = () => {
 
                   <div className="grid grid-cols-2 gap-2 pt-2">
                     <Button asChild className="h-11 bg-[#FFD700] hover:bg-white text-navy font-black text-[10px] uppercase tracking-widest rounded-full shadow-lg shadow-[#FFD700]/10">
-                      <a href="https://drive.google.com/file/d/1bNetxjDVRVb9dL1XXY7o3jgfIHSwhRZu/view?usp=sharing" download>
+                      <a href="https://drive.google.com/uc?export=download&id=1RrMEavx0cfrFtDD5UnxZmjRpOCjY6r6h">
                         <Download className="mr-2 h-4 w-4" /> Download
                       </a>
                     </Button>
                     <Button asChild variant="outline" className="h-11 border-white/20 bg-white/5 text-white hover:bg-white/10 text-[10px] font-black uppercase tracking-widest rounded-full">
-                      <a href="https://drive.google.com/file/d/1bNetxjDVRVb9dL1XXY7o3jgfIHSwhRZu/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                      <a href="https://drive.google.com/file/d/1RrMEavx0cfrFtDD5UnxZmjRpOCjY6r6h/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="mr-2 h-3 w-3" /> View PDF
                       </a>
                     </Button>

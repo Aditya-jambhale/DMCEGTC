@@ -117,7 +117,7 @@ export const Footer = () => {
       </div>
 
       {/* Modern Copyright Bar */}
-      <div className="relative border-t border-white/5 bg-[#FFD700] py-8 text-[#0B0D17]">
+      <div className="relative border-t border-white/5 bg-yellow-200 py-8 text-[#0B0D17]">
         <div className="container flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
             <p className="text-sm font-black uppercase tracking-wider">
