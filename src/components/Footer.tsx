@@ -56,6 +56,7 @@ export const Footer = () => {
                 { name: "Registration", path: "/registration" },
                 { name: "Committees", path: "/committees" },
                 { name: "Speakers", path: "/speakers" },
+                { name: "Contact Us", path: "/contact" },
                 // { name: "Exhibition", path: "#" },
                 // { name: "Reach Us", path: "#" }
               ].map((link) => (
