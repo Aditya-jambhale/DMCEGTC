@@ -57,12 +57,6 @@ const Index = () => {
       title: "Cash Awards",
       desc: "Best paper awards with cash prizes for every track.",
       color: "text-amber-500"
-    },
-    {
-      icon: Globe,
-      title: "Global Reach",
-      desc: "In association with CSI Student Branch & global experts.",
-      color: "text-primary"
     }
   ];
 
@@ -181,7 +175,7 @@ const Index = () => {
       </section>
 
       {/* 1. Legacy & Vision */}
-      <section className="py-20 bg-white overflow-hidden relative">
+      <section id="about-institute" className="py-20 bg-white overflow-hidden relative">
         <div className="container px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
             <Reveal className="space-y-8">
@@ -261,7 +255,7 @@ const Index = () => {
       {/* 2. Conference Poster & Brochure - Optimized Height & Preview */}
       {/* 2. Conference Poster & Brochure */}
       {/* 2. Conference Poster & Brochure */}
-      <section className="py-16 bg-gradient-to-b from-navy via-[#0f1729] to-navy relative overflow-hidden border-y border-white/5">
+      <section id="materials" className="py-16 bg-gradient-to-b from-navy via-[#0f1729] to-navy relative overflow-hidden border-y border-white/5">
         <div className="absolute inset-0 opacity-20 pointer-events-none">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/30 rounded-full blur-[150px] animate-pulse" />
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/30 rounded-full blur-[150px] animate-pulse delay-1000" />
@@ -331,44 +325,44 @@ const Index = () => {
 
             {/* BROCHURE CARD */}
             {/* BROCHURE CARD */}
-<Reveal delay={200}>
-  <Card className="border-white/10 bg-white/5 backdrop-blur-sm rounded-[2rem] overflow-hidden shadow-2xl flex flex-col">
-    <CardContent className="p-6 sm:p-8 flex flex-col space-y-6">
-      <div className="flex items-center gap-4">
-        <div className="w-12 h-12 bg-gradient-to-br from-[#FFD700] to-[#FFA500] rounded-xl flex items-center justify-center shadow-lg shadow-[#FFD700]/20">
-          <BookOpen size={24} className="text-navy" />
-        </div>
-        <div>
-          <h3 className="text-base font-black text-white uppercase tracking-tight">Conference Brochure</h3>
-          <p className="text-[9px] font-black text-white/40 uppercase tracking-widest">Full Event Guide</p>
-        </div>
-      </div>
+            <Reveal delay={200}>
+              <Card className="border-white/10 bg-white/5 backdrop-blur-sm rounded-[2rem] overflow-hidden shadow-2xl flex flex-col">
+                <CardContent className="p-6 sm:p-8 flex flex-col space-y-6">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#FFD700] to-[#FFA500] rounded-xl flex items-center justify-center shadow-lg shadow-[#FFD700]/20">
+                      <BookOpen size={24} className="text-navy" />
+                    </div>
+                    <div>
+                      <h3 className="text-base font-black text-white uppercase tracking-tight">Conference Brochure</h3>
+                      <p className="text-[9px] font-black text-white/40 uppercase tracking-widest">Full Event Guide</p>
+                    </div>
+                  </div>
 
-      {/* LOCAL PDF PREVIEW */}
-      <div className="relative h-64 max-h-64 w-full bg-black/40 rounded-xl overflow-hidden border border-white/5 shadow-inner">
-        <iframe
-          src="https://drive.google.com/file/d/1bNetxjDVRVb9dL1XXY7o3jgfIHSwhRZu/preview"
-          className="w-full h-full border-none"
-          title="Conference Brochure"
-          loading="lazy"
-        />
-      </div>
+                  {/* LOCAL PDF PREVIEW */}
+                  <div className="relative h-64 max-h-64 w-full bg-black/40 rounded-xl overflow-hidden border border-white/5 shadow-inner">
+                    <iframe
+                      src="https://drive.google.com/file/d/1bNetxjDVRVb9dL1XXY7o3jgfIHSwhRZu/preview"
+                      className="w-full h-full border-none"
+                      title="Conference Brochure"
+                      loading="lazy"
+                    />
+                  </div>
 
-      <div className="grid grid-cols-2 gap-2 pt-2">
-        <Button asChild className="h-11 bg-[#FFD700] hover:bg-white text-navy font-black text-[10px] uppercase tracking-widest rounded-full shadow-lg shadow-[#FFD700]/10">
-          <a href="https://drive.google.com/file/d/1bNetxjDVRVb9dL1XXY7o3jgfIHSwhRZu/view?usp=sharing" download>
-            <Download className="mr-2 h-4 w-4" /> Download
-          </a>
-        </Button>
-        <Button asChild variant="outline" className="h-11 border-white/20 bg-white/5 text-white hover:bg-white/10 text-[10px] font-black uppercase tracking-widest rounded-full">
-          <a href="https://drive.google.com/file/d/1bNetxjDVRVb9dL1XXY7o3jgfIHSwhRZu/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-            <ExternalLink className="mr-2 h-3 w-3" /> View PDF
-          </a>
-        </Button>
-      </div>
-    </CardContent>
-  </Card>
-</Reveal>
+                  <div className="grid grid-cols-2 gap-2 pt-2">
+                    <Button asChild className="h-11 bg-[#FFD700] hover:bg-white text-navy font-black text-[10px] uppercase tracking-widest rounded-full shadow-lg shadow-[#FFD700]/10">
+                      <a href="https://drive.google.com/file/d/1bNetxjDVRVb9dL1XXY7o3jgfIHSwhRZu/view?usp=sharing" download>
+                        <Download className="mr-2 h-4 w-4" /> Download
+                      </a>
+                    </Button>
+                    <Button asChild variant="outline" className="h-11 border-white/20 bg-white/5 text-white hover:bg-white/10 text-[10px] font-black uppercase tracking-widest rounded-full">
+                      <a href="https://drive.google.com/file/d/1bNetxjDVRVb9dL1XXY7o3jgfIHSwhRZu/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="mr-2 h-3 w-3" /> View PDF
+                      </a>
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            </Reveal>
 
 
           </div>
@@ -381,7 +375,7 @@ const Index = () => {
       <ConferenceTracks />
 
       {/* 4. Publication & Recognition (Prestige) */}
-      <section className="py-20 bg-slate-50 border-y border-slate-100 overflow-hidden">
+      <section id="publication" className="py-20 bg-slate-50 border-y border-slate-100 overflow-hidden">
         <div className="container px-4">
           <Reveal className="text-center mb-16 space-y-4">
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-secondary/10 text-secondary rounded-full">
@@ -396,7 +390,7 @@ const Index = () => {
             </p>
           </Reveal>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {highlights.map((item, idx) => (
               <Reveal key={idx} delay={idx * 100}>
                 <Card className="border-none shadow-xl rounded-[2.5rem] bg-white group hover:-translate-y-2 transition-all duration-500 h-full">
@@ -465,7 +459,7 @@ const Index = () => {
       </section> */}
 
       {/* 6. Timeline Summary & Procedure (How-to) */}
-      <section className="py-20 bg-slate-50 border-y border-slate-100 overflow-hidden">
+      <section id="procedure" className="py-20 bg-slate-50 border-y border-slate-100 overflow-hidden">
         <div className="container px-4">
           <div className="grid lg:grid-cols-12 gap-12 max-w-7xl mx-auto items-start">
 

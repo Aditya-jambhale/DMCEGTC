@@ -165,7 +165,7 @@ const PaperSubmission = () => {
                       </p>
                       <Button asChild size="sm">
                         <a
-                          href="https://forms.gle/CkNg8muFreP2CHYW6"
+                          href="https://forms.gle/vndeiaLQmg5WpjQCA"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -256,7 +256,7 @@ const PaperSubmission = () => {
               className="bg-gold hover:bg-gold-dark text-secondary-foreground"
             >
               <a
-                href="https://forms.gle/CkNg8muFreP2CHYW6"
+                href="https://forms.gle/vndeiaLQmg5WpjQCA"
                 target="_blank"
                 rel="noopener noreferrer"
               >

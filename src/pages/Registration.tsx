@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -17,16 +18,18 @@ import {
   Laptop,
   GraduationCap,
   Briefcase,
-  QrCode,
   CheckCircle2,
   ArrowRight,
   Info,
+
   Globe,
   MapPin,
   Wifi,
   Receipt,
   Download
 } from "lucide-react";
+import QRImage from "@/assets/QR.png";
+
 
 const registrationFees = {
   rows: [
@@ -138,7 +141,7 @@ const Registration = () => {
                       step: "Step 01",
                       title: "Manuscript Submission",
                       desc: "Submit your research via the official Google Form portal. Ensure all author details are accurate.",
-                      link: "https://forms.gle/CkNg8muFreP2CHYW6",
+                      link: "https://forms.gle/vndeiaLQmg5WpjQCA",
                       btnText: "Registration Form"
                     },
                     {
@@ -195,11 +198,11 @@ const Registration = () => {
                         <Table>
                           <TableHeader>
                             <TableRow className="bg-navy hover:bg-navy border-none">
-                              <TableHead className="text-white font-bold py-4 sm:py-6 pl-6 sm:pl-8 text-[10px] uppercase tracking-[0.15em]">Participant Category</TableHead>
-                              <TableHead className="text-white/60 font-bold py-4 sm:py-6 text-center text-[9px] uppercase tracking-tighter leading-tight">Indian<br />(Non-CSI)</TableHead>
-                              <TableHead className="text-[#FFD700] font-black py-4 sm:py-6 text-center text-[9px] uppercase tracking-tighter leading-tight bg-white/5 border-x border-white/5">Indian<br />(CSI Member)</TableHead>
-                              <TableHead className="text-white/60 font-bold py-4 sm:py-6 text-center text-[9px] uppercase tracking-tighter leading-tight">Foreign<br />(Non-CSI)</TableHead>
-                              <TableHead className="text-[#FFD700] font-black py-4 sm:py-6 text-center text-[9px] uppercase tracking-tighter leading-tight bg-white/5 border-l border-white/5">Foreign<br />(CSI Member)</TableHead>
+                              <TableHead className="text-white font-bold py-4 sm:py-6 pl-6 sm:pl-8 text-[15px] uppercase tracking-[0.15em]">Participant Category</TableHead>
+                              <TableHead className="text-white/60 font-bold py-4 sm:py-6 text-center text-[12px] uppercase tracking-tighter leading-tight">Indian<br />(Non-CSI)</TableHead>
+                              <TableHead className="text-[#FFD700] font-black py-4 sm:py-6 text-center text-[12px] uppercase tracking-tighter leading-tight bg-white/5 border-x border-white/5">Indian<br />(CSI Member)</TableHead>
+                              <TableHead className="text-white/60 font-bold py-4 sm:py-6 text-center [text-12px] uppercase tracking-tighter leading-tight">Foreign<br />(Non-CSI)</TableHead>
+                              <TableHead className="text-[#FFD700] font-black py-4 sm:py-6 text-center text-[12px] uppercase tracking-tighter leading-tight bg-white/5 border-l border-white/5">Foreign<br />(CSI Member)</TableHead>
                             </TableRow>
                           </TableHeader>
                           <TableBody>
@@ -227,7 +230,7 @@ const Registration = () => {
                 </Reveal>
                 <Reveal className="flex items-center gap-3 p-4 bg-secondary/5 rounded-2xl border-l-4 border-l-secondary" delay={400}>
                   <Info size={14} className="text-secondary shrink-0" />
-                  <p className="text-[11px] font-bold text-navy italic">
+                  <p className="text-[13px] font-bold text-navy italic">
                     * CSI Members validation requires a valid membership proof during registration.
                   </p>
                 </Reveal>
@@ -245,15 +248,17 @@ const Registration = () => {
                     <h3 className="text-[10px] font-black uppercase tracking-[0.2em] text-white/40 mb-6 sm:mb-8">Official Link / QR</h3>
 
                     <div className="bg-white p-4 sm:p-5 rounded-[1.5rem] sm:rounded-[2rem] inline-block shadow-inner mb-6 sm:mb-8 transition-transform hover:scale-105 cursor-pointer">
-                      <div className="w-32 h-32 sm:w-40 sm:h-40 bg-slate-50 rounded-xl sm:rounded-2xl flex items-center justify-center border-2 border-dashed border-slate-200">
-                        {/* Visual Placeholder for QR */}
-                        <QrCode size={64} className="text-slate-300 sm:hidden" />
-                        <QrCode size={80} className="text-slate-300 hidden sm:block" />
+                      <div className="w-32 h-32 sm:w-40 sm:h-40 bg-slate-50 rounded-xl sm:rounded-2xl flex items-center justify-center overflow-hidden p-2">
+                        <img
+                          src={QRImage}
+                          alt="Registration QR Code"
+                          className="w-full h-full object-contain"
+                        />
                       </div>
                     </div>
 
                     <Button asChild className="w-full bg-[#FFD700] hover:bg-white text-navy font-black text-[11px] uppercase tracking-[0.2em] rounded-full py-6 sm:py-7 shadow-xl shadow-black/20 hover:-translate-y-1 transition-all">
-                      <a href="https://forms.gle/CkNg8muFreP2CHYW6" target="_blank">Registration Portal</a>
+                      <a href="https://forms.gle/vndeiaLQmg5WpjQCA" target="_blank">Registration Portal</a>
                     </Button>
                   </Card>
                 </Reveal>
@@ -270,25 +275,25 @@ const Registration = () => {
                       <div className="p-5 sm:p-6 bg-gradient-to-br from-navy to-navy/95 text-white border-b border-white/5 relative h-full">
                         <div className="flex justify-between items-start mb-8 sm:mb-10">
                           <Building size={20} className="text-secondary/60" />
-                          <span className="text-[9px] font-black uppercase tracking-[0.2em] opacity-40">Payment Info</span>
+                          <span className="text-[10px] font-black uppercase tracking-[0.2em] opacity-40">Payment Info</span>
                         </div>
                         <p className="text-[8px] font-black uppercase tracking-widest text-[#FFD700]/60 mb-1">Beneficiary Name</p>
-                        <h4 className="text-[13px] font-bold uppercase tracking-tight mb-2">MISS DMCE STUDENT BRANCH CSI</h4>
+                        <h4 className="text-[16px] font-bold uppercase tracking-tight mb-2">MISS DMCE STUDENT BRANCH CSI</h4>
                       </div>
                       <CardContent className="p-6 sm:p-8 space-y-5 text-navy">
                         <div className="grid grid-cols-1 gap-5">
                           <div>
-                            <p className="text-[8px] font-black text-slate-300 uppercase tracking-widest mb-1.5">Account Number</p>
+                            <p className="text-[12px] font-black text-slate-300 uppercase tracking-widest mb-1.5">Account Number</p>
                             <p className="text-[15px] font-black font-mono tracking-tight leading-none">520101005225171</p>
                           </div>
                           <div className="grid grid-cols-2 gap-3 sm:gap-4">
                             <div>
-                              <p className="text-[8px] font-black text-slate-300 uppercase tracking-widest mb-1.5">IFSC Code</p>
-                              <p className="text-xs font-black font-mono">UBIN0904716</p>
+                              <p className="text-[12px] font-black text-slate-300 uppercase tracking-widest mb-1.5">IFSC Code</p>
+                              <p className="text-[15px] font-black font-mono">UBIN0904716</p>
                             </div>
                             <div>
-                              <p className="text-[8px] font-black text-slate-300 uppercase tracking-widest mb-1.5">Bank Name</p>
-                              <p className="text-[9px] font-bold leading-tight">Union Bank of India</p>
+                              <p className="text-[12px] font-black text-slate-300 uppercase tracking-widest mb-1.5">Bank Name</p>
+                              <p className="text-[15px] font-bold leading-tight">Union Bank of India</p>
                             </div>
                           </div>
                           <div className="pt-4 border-t border-slate-50">
@@ -300,11 +305,11 @@ const Registration = () => {
                   </Reveal>
                 </div>
 
-                <Reveal className="mt-8" delay={600}>
+                {/* <Reveal className="mt-8" delay={600}>
                   <Button variant="ghost" className="w-full text-slate-300 hover:text-primary text-[9px] font-black uppercase tracking-widest gap-2">
                     <Download size={14} /> Download Receipt Guide
                   </Button>
-                </Reveal>
+                </Reveal> */}
 
               </div>
             </div>
@@ -324,9 +329,9 @@ const Registration = () => {
               Our hospitality team is available to assist you with offline logistics or online connectivity.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
-              <a href="/committees" className="px-8 py-2.5 bg-white border border-slate-200 text-navy font-black text-[10px] uppercase tracking-widest rounded-full hover:bg-navy hover:text-white transition-all">
-                View Support Team
-              </a>
+              <Link to="/contact" className="px-8 py-2.5 bg-white border border-slate-200 text-navy font-black text-[10px] uppercase tracking-widest rounded-full hover:bg-navy hover:text-white transition-all">
+                Contact Us
+              </Link>
             </div>
           </div>
         </div>

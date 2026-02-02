@@ -93,18 +93,23 @@ const About = () => {
           <hr className="border-slate-100 mb-16 sm:mb-24" />
 
           {/* About Department Section */}
-          <div className="mb-16 sm:mb-24 text-left">
-            <Reveal className="max-w-3xl mb-10 sm:mb-12">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-secondary/10 text-secondary rounded-full mb-3">
+          <div className="mb-16 sm:mb-24 text-center">
+            <Reveal className="max-w-4xl mx-auto mb-12 sm:mb-16">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-secondary/10 text-secondary rounded-full mb-4">
                 <GraduationCap size={14} />
                 <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider">Academic Excellence</span>
               </div>
-              <h2 className="font-heading text-2xl sm:text-3xl font-extrabold text-navy mb-4 sm:mb-6">
+              <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-extrabold text-navy mb-6">
                 Department of Computer Engineering
               </h2>
-              <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                Established in 1992, the department has grown into a prestigious hub for technical education, now offering UG (intake 180), PG, and Ph.D. programs under the University of Mumbai.
-              </p>
+              <div className="space-y-4 max-w-4xl mx-auto">
+                <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+                  Established in 1992, the Department of Computer Engineering has evolved into a hub of academic excellence, offering Undergraduate, Postgraduate (M.E.), and Ph.D. programs under the University of Mumbai. With modern laboratories in Networking, Cloud Computing, Cluster Computing, Web Engineering, Advanced Databases, Network Infrastructure, and IT Security, the department emphasizes hands-on and research-driven learning.
+                </p>
+                <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+                  Faculty expertise spans emerging technology domains, supported by Outcome-Based Education (OBE) practices aligned with global standards. Technical skill development is strengthened through the Computer Association for Technological Trends (CATT) and the CSI–DMCE Student Chapter under the Computer Society of India.
+                </p>
+              </div>
             </Reveal>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
@@ -174,7 +179,7 @@ const About = () => {
               </Reveal>
               <div className="grid sm:grid-cols-2 gap-6 sm:gap-8">
                 {[
-                  { title: "Diverse Programs", desc: "Offering B.E., M.E., and Ph.D. programs in Civil, Mechanical, Computer, Electronics & Telecommunication, Chemical, IT, and AI&DS." },
+                  { title: "Diverse Programs", desc: "Offering B.E., M.E., and Ph.D. programs in Civil & Infrastructure, Mechanical, Computer, Electronics & Telecommunication, Chemical, IT, and AI&DS." },
                   { title: "Holistic Development", desc: "Focusing on ethical leadership and societal values through the UHV Cell, nurturing professionals who are ready for the future." },
                   { title: "Industry Ties", desc: "Strong connections and an expansive alumni network ensure students gain practical expertise and global career opportunities." },
                   { title: "Modern Campus", desc: "Features advanced laboratories, a vast library, and collaborative spaces for research and industry engagement." }

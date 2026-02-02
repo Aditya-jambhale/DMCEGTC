@@ -68,7 +68,7 @@ const Publication = () => {
                       <span className="text-[10px] font-black uppercase tracking-[0.2em] text-amber-600 bg-amber-100/50 px-3 py-1 rounded-full">Primary Award</span>
                     </div>
                     <h3 className="text-xl font-black text-navy mb-1 uppercase tracking-tight">First Best Paper</h3>
-                    <p className="text-xs font-bold text-amber-600/80 uppercase tracking-widest">Global Excellence Trophy</p>
+                    {/* <p className="text-xs font-bold text-amber-600/80 uppercase tracking-widest">Global Excellence Trophy</p> */}
                   </div>
                   <CardContent className="p-8 space-y-6">
                     <div className="flex items-baseline gap-2">
@@ -104,7 +104,7 @@ const Publication = () => {
                       <span className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 bg-slate-100 px-3 py-1 rounded-full">Secondary Award</span>
                     </div>
                     <h3 className="text-xl font-black text-navy mb-1 uppercase tracking-tight">Second Best Paper</h3>
-                    <p className="text-xs font-bold text-slate-400 uppercase tracking-widest">Emerging Researcher Recognition</p>
+                    {/* <p className="text-xs font-bold text-slate-400 uppercase tracking-widest">Emerging Researcher Recognition</p> */}
                   </div>
                   <CardContent className="p-8 space-y-6">
                     <div className="flex items-baseline gap-2">
@@ -113,10 +113,9 @@ const Publication = () => {
                     </div>
                     <div className="space-y-3">
                       {[
-                        "Official Excellence Certificate",
-                        "Commemorative Conference Medal",
-                        "Fast-track Review Process",
-                        "Public Recognition Plaque"
+                       "Prestigious Excellence Certificate",
+                        "Recommendation for Premium Journal",
+                        "Featured Showcase on Website"
                       ].map((item, i) => (
                         <div key={i} className="flex gap-3 items-center">
                           <CheckCircle2 className="text-slate-400 shrink-0" size={16} />
@@ -239,7 +238,7 @@ const Publication = () => {
                 <div className="space-y-4">
                   {[
                     "Digitally Signed & Verified",
-                    "Includes Unique Tracking ID",
+          
                     "Sent to Registered Email Addresses",
                     "Separate Certificate for Every Co-author"
                   ].map((item, i) => (
@@ -283,7 +282,7 @@ const Publication = () => {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
               <Button asChild size="lg" className="bg-primary hover:bg-navy text-white font-black text-[10px] uppercase tracking-widest rounded-full px-10 h-12 shadow-xl shadow-primary/20">
-                <Link to="/registration">Submit Your Paper</Link>
+                <a href="https://forms.gle/vndeiaLQmg5WpjQCA">Submit Your Paper</a>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-slate-200 text-navy font-black text-[10px] uppercase tracking-widest rounded-full px-10 h-12 hover:bg-white hover:border-primary/20 bg-white">
                 <Link to="/cfp">View Call for Papers</Link>

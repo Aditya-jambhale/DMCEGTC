@@ -34,8 +34,8 @@ const committees = [
         name: "Hon'ble Dr. Rituparna Banerjee",
         role: "Secretary, NYSS, Airoli",
       },
-      { name: "Dr. A.R. Katti", role: "Managing Director, NYSS, Airoli" },
-      { name: "Dr. S.D. Sawarkar", role: "Executive Director, NYSS Airoli" },
+      { name: "Dr. A. R. Katti", role: "Managing Director, NYSS, Airoli" },
+      { name: "Dr. S. D. Sawarkar", role: "Executive Director, NYSS Airoli" },
     ],
   },
   {
@@ -93,10 +93,10 @@ const committees = [
   {
     title: "Reviewer Appointing Committee",
     members: [
-      { name: "Dr. P.Y. Itankar", role: "" },
+      { name: "Dr. P. Y. Itankar", role: "" },
       { name: "Mr. J. Mathew", role: "" },
       { name: "Mrs. J. A. Gaikawad", role: "" },
-      { name: "Mr. R.N. Mendhe", role: "" },
+      { name: "Mr. R. N. Mendhe", role: "" },
       { name: "Dr. Shailaja Mohite", role: "" },
       { name: "Mrs. Saranaya Vinod", role: "" },
     ],

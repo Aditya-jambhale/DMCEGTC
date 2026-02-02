@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card, CardContent } from "@/components/ui/card";
@@ -136,7 +137,7 @@ const Speakers = () => {
             </p>
             <div className="pt-4">
               <a
-                href="/registration"
+                href="https://forms.gle/vndeiaLQmg5WpjQCA"
                 className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-white font-black text-xs uppercase tracking-[0.2em] rounded-full shadow-lg shadow-primary/20 hover:bg-navy hover:-translate-y-1 transition-all"
               >
                 Submit Your Paper

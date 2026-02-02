@@ -14,7 +14,9 @@ import Speakers from "./pages/Speakers";
 import Registration from "./pages/Registration";
 import PaperSubmission from "./pages/PaperSubmission";
 import Publication from "./pages/Publication";
+import ScrollToTop from "./components/ScrollToTop";
 import NotFound from "./pages/NotFound";
+import Contact from "./pages/contact"
 
 const queryClient = new QueryClient();
 
@@ -28,6 +30,7 @@ const App = () => {
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
@@ -38,6 +41,7 @@ const App = () => {
             <Route path="/registration" element={<Registration />} />
             {/* <Route path="/paper-submission" element={<PaperSubmission />} /> */}
             <Route path="/publication" element={<Publication />} />
+              <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

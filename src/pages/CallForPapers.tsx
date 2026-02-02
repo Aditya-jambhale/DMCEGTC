@@ -78,7 +78,8 @@ const CallForPapers = () => {
                   "Papers must follow the standard conference template.",
                   "All figures, tables, and equations must be high resolution.",
                   "Proper referencing in designated format is mandatory.",
-                  "Similarity index must be within acceptable limits (max 15-20%)."
+                  "Similarity index must be within acceptable limits (max 15-20%).",
+                  "Journal acceptance is subject to journal norms; additional publication charges, if any, will be borne by authors"
                 ].map((text, i) => (
                   <div key={i} className="flex gap-4 group">
                     <Dot className="h-6 w-6 text-primary shrink-0 -mt-1 group-hover:scale-150 transition-transform" />
@@ -90,20 +91,22 @@ const CallForPapers = () => {
               </div>
 
               <div className="pt-6">
-                <Card className="border-2 border-dashed border-slate-200 bg-white hover:border-primary/40 transition-colors shadow-none rounded-[1.5rem] group cursor-pointer">
-                  <CardContent className="p-6 flex items-center justify-between">
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all">
-                        <Download size={20} />
+                <a href="https://docs.google.com/document/d/1TABtQDZa7sEhSwmTX2qWEtzzxrPZbizy/edit" target="_blank" rel="noopener noreferrer" className="block group">
+                  <Card className="border-2 border-dashed border-slate-200 bg-white hover:border-primary/40 transition-colors shadow-none rounded-[1.5rem] group cursor-pointer">
+                    <CardContent className="p-6 flex items-center justify-between">
+                      <div className="flex items-center gap-4">
+                        <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all">
+                          <Download size={20} />
+                        </div>
+                        <div>
+                          <p className="font-bold text-navy group-hover:text-primary transition-colors">Paper Template</p>
+                          <p className="text-xs text-slate-400 font-medium">Download latest (.docx / LaTeX)</p>
+                        </div>
                       </div>
-                      <div>
-                        <p className="font-bold text-navy group-hover:text-primary transition-colors">Paper Template</p>
-                        <p className="text-xs text-slate-400 font-medium">Download latest (.docx / LaTeX)</p>
-                      </div>
-                    </div>
-                    <ArrowRight className="text-slate-200 group-hover:text-primary transition-colors" />
-                  </CardContent>
-                </Card>
+                      <ArrowRight className="text-slate-200 group-hover:text-primary transition-colors" />
+                    </CardContent>
+                  </Card>
+                </a>
               </div>
             </div>
 
@@ -195,7 +198,7 @@ const CallForPapers = () => {
                 variant="outline"
                 className="border-slate-200 text-slate-600 hover:bg-white hover:border-primary/20 rounded-full font-black text-xs uppercase tracking-[0.2em] px-10"
               >
-                <Link to="/important-dates">Critical Dates</Link>
+                <Link to="/important-dates">Important Dates</Link>
               </Button>
             </div>
           </div>

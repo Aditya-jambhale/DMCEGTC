@@ -3,7 +3,7 @@ import { Reveal } from "./Reveal";
 
 export const ConferenceTracks = () => {
     return (
-        <section className="py-16 sm:py-20 bg-white relative overflow-hidden">
+        <section id="tracks" className="py-16 sm:py-20 bg-white relative overflow-hidden">
             <div className="container relative z-10">
                 <Reveal className="text-center mb-16 px-4">
                     <h2 className="font-heading text-xl sm:text-2xl md:text-3xl font-extrabold text-navy mb-4">

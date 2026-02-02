@@ -18,6 +18,7 @@ const navItems = [
   { name: "Registration", path: "/registration" },
   // { name: "Paper Submission", path: "/paper-submission" },
   { name: "Publication", path: "/publication" },
+  { name: "Contact Us", path: "/contact" },
 ];
 
 export const Header = () => {
@@ -46,8 +47,8 @@ export const Header = () => {
         {/* Left side - Conference branding */}
         <Link to="/" className="flex items-center gap-3 group">
           <div className="relative">
-            <img src={conferenceLogo} alt="Logo" className="h-12 md:h-20 lg:h-24 w-auto drop-shadow-md transition-transform group-hover:rotate-3" />
-            <div className="absolute -inset-2 bg-primary/10 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
+            <img src={conferenceLogo} alt="Logo" className="h-16 md:h-20 lg:h-28 w-auto drop-shadow-md transition-transform group-hover:rotate-3" />
+            {/* <div className="absolute -inset-2 bg-primary/10 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity" /> */}
           </div>
         </Link>
 
@@ -78,7 +79,8 @@ export const Header = () => {
         {/* Right side - CSI Logo and Mobile Menu */}
         <div className="flex items-center gap-4">
           <div className="hidden sm:flex items-center gap-3 bg-muted/50 px-4 py-2 rounded-full border border-border/50 hover:bg-muted transition-colors">
-            <img src={csiLogo} alt="CSI" className="h-10 md:h-12 w-auto group-hover:grayscale-0 transition-all opacity-90 shadow-sm" />
+            <img src={csiLogo} alt="CSI" className="h-10 md:h-21 w-auto group-hover:grayscale-0 transition-all opacity-90 shadow-sm" />
+     
           </div>
 
           <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
