@@ -106,13 +106,22 @@ const Index = () => {
             </Reveal>
 
             <Reveal delay={400}>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-                <div className="px-5 py-2 bg-white/10 rounded-xl backdrop-blur-sm border border-white/10">
-                  <p className="text-sm font-bold text-[#FFD700] uppercase tracking-[0.2em] mb-0.5">DMCE-GTC 2026</p>
+              <div className="flex flex-col items-center justify-center gap-6 mb-12 text-center">
+                <div className="px-6 py-2 bg-white/5 rounded-2xl backdrop-blur-md border border-white/10 shadow-2xl">
+                  <p className="text-xs sm:text-sm font-black text-[#FFD700] uppercase tracking-[0.3em] mb-0.5">DMCE-GTC 2026</p>
                 </div>
-                <div className="flex items-center gap-2 text-white/60">
-                  <Users size={16} />
-                  <span className="text-xs font-bold uppercase tracking-widest">In association with CSI Student Branch</span>
+                <div className="flex flex-col items-center gap-4 mt-1">
+                  <div className="flex items-center gap-3 opacity-30">
+                    <div className="h-px w-12 bg-gradient-to-r from-transparent to-white" />
+                    <Users size={16} className="text-white" />
+                    <div className="h-px w-12 bg-gradient-to-l from-transparent to-white" />
+                  </div>
+                  <span className="text-[10px] sm:text-[12px] font-black uppercase tracking-[0.4em] text-white/50 leading-loose max-w-xs sm:max-w-none">
+                    In association with <br className="sm:hidden" />
+                    <span className="text-white/90">Computer Society of India (CSI)</span>
+                    <br />
+                    <span className="text-white/40 text-[9px] tracking-[0.5em]">Student Branch</span>
+                  </span>
                 </div>
               </div>
             </Reveal>

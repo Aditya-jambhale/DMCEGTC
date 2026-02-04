@@ -77,6 +77,7 @@ const Publication = () => {
                     </div>
                     <div className="space-y-3">
                       {[
+                        "Gold Medal for First Best Paper",
                         "Prestigious Excellence Certificate",
                         "Commemorative Conference Medal",
                         "Recommendation for Premium Journal",
@@ -113,7 +114,9 @@ const Publication = () => {
                     </div>
                     <div className="space-y-3">
                       {[
+                        "Silver Medal for Second Best Paper",
                        "Prestigious Excellence Certificate",
+
                         "Recommendation for Premium Journal",
                         "Featured Showcase on Website"
                       ].map((item, i) => (

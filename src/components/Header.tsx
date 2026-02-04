@@ -43,17 +43,17 @@ export const Header = () => {
         </Link>
       </div>
 
-      <div className="container flex h-20 md:h-28 items-center justify-between">
+      <div className="container flex h-20 md:h-32 items-center justify-between  ">
         {/* Left side - Conference branding */}
-        <Link to="/" className="flex items-center gap-3 group">
-          <div className="relative">
-            <img src={conferenceLogo} alt="Logo" className="h-16 md:h-20 lg:h-28 w-auto drop-shadow-md transition-transform group-hover:rotate-3" />
+        <Link to="/" className="flex items-center gap-2 group">
+          <div className="relative ">
+            <img src={conferenceLogo} alt="Logo" className="h-16 md:h-28 lg:h-32 w-auto mx-auto" />
             {/* <div className="absolute -inset-2 bg-primary/10 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity" /> */}
           </div>
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-1">
+        <nav className="hidden lg:flex items-center gap-1 ">
           {navItems.map((item) => {
             const isActive = location.pathname === item.path;
             return (
@@ -61,7 +61,7 @@ export const Header = () => {
                 key={item.path}
                 to={item.path}
                 className={cn(
-                  "relative px-4 py-2 text-sm font-semibold transition-all duration-200",
+                  "relative px-4 py-2 text-[10px] md:text-[14px] font-semibold transition-all duration-200",
                   isActive
                     ? "text-primary"
                     : "text-foreground/70 hover:text-primary"
@@ -77,10 +77,10 @@ export const Header = () => {
         </nav>
 
         {/* Right side - CSI Logo and Mobile Menu */}
-        <div className="flex items-center gap-4">
-          <div className="hidden sm:flex items-center gap-3 bg-muted/50 px-4 py-2 rounded-full border border-border/50 hover:bg-muted transition-colors">
-            <img src={csiLogo} alt="CSI" className="h-10 md:h-21 w-auto group-hover:grayscale-0 transition-all opacity-90 shadow-sm" />
-     
+        <div className="flex items-center gap-2">
+          <div className="hidden sm:flex items-center  px-4 py-2  hover:bg-muted transition-colors">
+            <img src={csiLogo} alt="CSI" className="h-10 md:h-24 w-auto group-hover:grayscale-0 transition-all opacity-90 shadow-sm" />
+
           </div>
 
           <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
