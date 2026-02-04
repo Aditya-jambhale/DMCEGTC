@@ -129,10 +129,12 @@ export const Footer = () => {
           <div className="flex items-center gap-8 text-sm font-black uppercase tracking-wider">
             <div className="flex items-center gap-3 group cursor-default">
               <span className="text-[10px] font-bold opacity-60">Engineered by</span>
-              <span className="relative">
-                CSI CATT DMCE
-                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-[#0B0D17] scale-x-0 group-hover:scale-x-100 transition-transform origin-right group-hover:origin-left duration-300" />
-              </span>
+              <Link to="https://csidmce.com/" target="_blank">
+                <span className="relative">
+                  CSI CATT DMCE
+                  <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-[#0B0D17] scale-x-0 group-hover:scale-x-100 transition-transform origin-right group-hover:origin-left duration-300" />
+                </span>
+              </Link>
             </div>
           </div>
         </div>

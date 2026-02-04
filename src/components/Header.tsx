@@ -29,7 +29,7 @@ export const Header = () => {
     <header className="relative  z-50 w-full border-b border-border bg-white/80 backdrop-blur-md transition-all duration-300">
       {/* Top bar with centered DMCE logo */}
       <div className="container flex h-auto min-h-[80px] items-center justify-center border-b border-border/40 py-4 bg-gradient-to-b from-navy/[0.02] to-transparent">
-        <Link to="/" className="flex flex-col md:flex-row items-center gap-3 md:gap-8 group transition-all duration-500 hover:scale-[1.01] active:scale-95 text-center md:text-left">
+        <Link to="https://dmce.ac.in" className="flex flex-col md:flex-row items-center gap-3 md:gap-8 group transition-all duration-500 hover:scale-[1.01] active:scale-95 text-center md:text-left">
           <div className="relative">
             <img src={dmceLogo} alt="DMCE Logo" className="h-14 md:h-24 w-auto drop-shadow-xl transition-transform duration-700 group-hover:scale-110" />
             <div className="absolute -inset-4 bg-secondary/5 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -78,10 +78,12 @@ export const Header = () => {
 
         {/* Right side - CSI Logo and Mobile Menu */}
         <div className="flex items-center gap-2">
-          <div className="hidden sm:flex items-center  px-4 py-2  hover:bg-muted transition-colors">
-            <img src={csiLogo} alt="CSI" className="h-10 md:h-24 w-auto group-hover:grayscale-0 transition-all opacity-90 shadow-sm" />
+          <Link to="https://csidmce.com/">
+            <div className="hidden sm:flex items-center  px-4 py-2  hover:bg-muted transition-colors">
+              <img src={csiLogo} alt="CSI" className="h-10 md:h-24 w-auto group-hover:grayscale-0 transition-all opacity-90 shadow-sm" />
 
-          </div>
+            </div>
+          </Link>
 
           <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
             <SheetTrigger asChild>
