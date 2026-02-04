@@ -525,7 +525,7 @@ const Index = () => {
                       </div>
                     ))}
                   </div>
-                  <Button asChild className="w-full mt-12 h-12 bg-white/5 hover:bg-white text-navy font-black text-[10px] uppercase tracking-widest rounded-full transition-all">
+                  <Button asChild className="w-full mt-12 h-12 bg-white text-navy hover:bg-[#FFD700] hover:text-navy font-black text-[10px] uppercase rounded-full transition-all duration-300">
                     <Link to="/important-dates">View Full Timeline</Link>
                   </Button>
                 </Card>
