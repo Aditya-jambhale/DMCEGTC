@@ -79,7 +79,7 @@ const Publication = () => {
                       {[
                         "Gold Medal for First Best Paper",
                         "Prestigious Excellence Certificate",
-                        "Commemorative Conference Medal",
+                      
                         "Recommendation for Premium Journal",
                         "Featured Showcase on Website"
                       ].map((item, i) => (
