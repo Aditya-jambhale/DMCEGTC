@@ -233,7 +233,7 @@ const Index = () => {
                     </div>
                     <div>
                       <h4 className="font-bold text-navy text-base mb-1">Cutting-Edge Research</h4>
-                      <p className="text-xs text-slate-500 font-medium leading-relaxed">Focusing on high-impact disciplines in Computer & Electrical Engineering.</p>
+                      <p className="text-xs text-slate-500 font-medium leading-relaxed">Focusing on high-impact disciplines in Computer & Electronics Engineering.</p>
                     </div>
                   </div>
                   <div className="flex gap-4 items-start">

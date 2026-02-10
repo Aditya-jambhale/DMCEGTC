@@ -79,7 +79,7 @@ const CallForPapers = () => {
                   "All figures, tables, and equations must be high resolution.",
                   "Proper referencing in designated format is mandatory.",
                   "Similarity index must be within acceptable limits (max 15-20%).",
-                
+
                 ].map((text, i) => (
                   <div key={i} className="flex gap-4 group">
                     <Dot className="h-6 w-6 text-primary shrink-0 -mt-1 group-hover:scale-150 transition-transform" />
@@ -176,7 +176,7 @@ const CallForPapers = () => {
         <div className="container px-4 text-center">
           <div className="max-w-4xl mx-auto p-12 bg-slate-50 rounded-[3rem] border border-slate-100 relative overflow-hidden group">
             <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -mr-32 -mt-32" />
-            <h2 className="font-heading text-xl sm:text-2xl font-black text-navy uppercase tracking-tighter mb-4 relative z-10">
+            <h2 className="font-heading text-xl sm:text-2xl font-black text-navy uppercase tracking-[0.2em] mb-4 relative z-10">
               Submit Your Manuscript
             </h2>
             <p className="text-slate-500 text-sm sm:text-base max-w-xl mx-auto mb-10 relative z-10 font-medium">

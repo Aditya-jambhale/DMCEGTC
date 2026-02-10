@@ -92,7 +92,7 @@ const ImportantDates = () => {
 
                     {/* Content */}
                     <div className="pt-1 sm:pt-2 flex-1">
-                      <span className={`block text-[10px] sm:text-xs font-black uppercase tracking-[0.25em] mb-1.5 sm:mb-2 ${item.highlight ? 'text-secondary' : 'text-primary'}`}>
+                      <span className={`block text-[15px] sm:text-lg font-black uppercase tracking-[0.25em] mb-1.5 sm:mb-2 ${item.highlight ? 'text-secondary' : 'text-primary'}`}>
                         {item.date}
                       </span>
                       <h3 className={`font-bold text-base sm:text-lg md:text-xl leading-snug max-w-xl transition-colors ${item.highlight ? 'text-navy' : 'text-navy/80 group-hover:text-navy'}`}>
