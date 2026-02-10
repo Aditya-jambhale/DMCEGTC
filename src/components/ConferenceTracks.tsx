@@ -62,7 +62,7 @@ export const ConferenceTracks = () => {
                                 <div>
                                     <span className="inline-block px-3 py-1 bg-secondary/10 text-secondary text-[10px] font-bold uppercase tracking-widest rounded-full mb-1">Track 02</span>
                                     <h3 className="font-heading text-base sm:text-lg md:text-xl font-bold text-navy">
-                                        Recent Trends in Electrical Engineering
+                                        Recent Trends in Electronics Engineering
                                     </h3>
                                 </div>
                             </div>
