@@ -23,13 +23,17 @@ const Publication = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bg-navy py-10 sm:py-12 md:py-16 text-white border-b border-white/10 overflow-hidden">
-        <div className="container px-4">
+      <section className="bg-navy py-12 sm:py-16 md:py-20 text-white border-b border-white/10 overflow-hidden relative">
+        <div className="absolute inset-0 opacity-10 pointer-events-none">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-primary/30 rounded-full blur-[120px] -mr-48 -mt-48" />
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/20 rounded-full blur-[120px] -ml-48 -mb-48" />
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
           <Reveal className="max-w-3xl mx-auto text-center" delay={100}>
-            <h1 className="font-heading text-2xl sm:text-3xl md:text-4xl font-extrabold mb-3 sm:mb-4 uppercase tracking-tighter">
+            <h1 className="font-heading text-3xl sm:text-4xl md:text-4xl font-extrabold mb-4 sm:mb-6 uppercase tracking-tight">
               Awards & Publication
             </h1>
-            <p className="text-white/60 text-xs sm:text-sm md:text-base max-w-xl mx-auto font-medium">
+            <p className="text-white/60 text-sm sm:text-base md:text-lg max-w-xl mx-auto font-medium leading-relaxed">
               Championing research excellence through prestigious awards and global indexing opportunities.
             </p>
           </Reveal>
@@ -37,55 +41,53 @@ const Publication = () => {
       </section>
 
       {/* Best Paper Awards Section */}
-      <section className="py-12 sm:py-20 bg-white overflow-hidden">
-        <div className="container px-4">
+      <section className="py-16 sm:py-24 bg-white overflow-hidden">
+        <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <Reveal className="flex flex-col md:flex-row items-end justify-between gap-6 mb-12">
+            <Reveal className="flex flex-col md:flex-row items-center md:items-end justify-between gap-8 mb-12 sm:mb-16 text-center md:text-left">
               <div className="space-y-4">
                 <div className="inline-flex items-center gap-2 px-3 py-1 bg-secondary/10 text-secondary rounded-full">
                   <Trophy size={14} className="fill-secondary" />
                   <span className="text-[10px] font-black uppercase tracking-widest">Excellence Recognition</span>
                 </div>
-                <h2 className="text-2xl sm:text-3xl font-black text-navy uppercase tracking-tighter shrink-0">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-navy uppercase tracking-tighter">
                   Best Paper Awards
                 </h2>
               </div>
-              <p className="text-slate-500 text-sm max-w-md font-medium leading-relaxed">
+              <p className="text-slate-500 text-sm sm:text-base max-w-md font-medium leading-relaxed">
                 To encourage high-quality research, DMCE-GTC 2026 will recognize exceptional contributions in each conference track.
               </p>
             </Reveal>
 
-            <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10">
               {/* First Prize */}
-              <Reveal className="relative group" delay={200}>
-                <div className="absolute -inset-1 bg-gradient-to-r from-[#FFD700] to-amber-500 rounded-[2.5rem] blur opacity-20 group-hover:opacity-40 transition duration-700"></div>
-                <Card className="relative border-slate-100 shadow-xl rounded-[2.2rem] overflow-hidden bg-white">
-                  <div className="bg-gradient-to-br from-amber-50 to-white p-8 border-b border-amber-100/50">
+              <Reveal className="relative group w-full min-w-0" delay={200}>
+                <div className="absolute -inset-1 bg-gradient-to-r from-[#FFD700] to-amber-500 rounded-[2.5rem] blur opacity-20 group-hover:opacity-40 transition duration-700 hidden sm:block"></div>
+                <Card className="relative border-slate-100 shadow-xl rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden bg-white mx-0">
+                  <div className="bg-gradient-to-br from-amber-50 to-white p-6 sm:p-10 border-b border-amber-100/50">
                     <div className="flex justify-between items-start mb-6">
-                      <div className="w-14 h-14 bg-white rounded-2xl shadow-md flex items-center justify-center border border-amber-200">
-                        <Trophy className="text-amber-500" size={32} />
+                      <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-2xl shadow-md flex items-center justify-center border border-amber-200">
+                        <Trophy className="text-amber-500" size={28} />
                       </div>
-                      <span className="text-[10px] font-black uppercase tracking-[0.2em] text-amber-600 bg-amber-100/50 px-3 py-1 rounded-full">Primary Award</span>
+                      <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.2em] text-amber-600 bg-amber-100/50 px-3 py-1 rounded-full">Primary Award</span>
                     </div>
-                    <h3 className="text-xl font-black text-navy mb-1 uppercase tracking-tight">First Best Paper</h3>
-                    {/* <p className="text-xs font-bold text-amber-600/80 uppercase tracking-widest">Global Excellence Trophy</p> */}
+                    <h3 className="text-xl sm:text-2xl font-black text-navy mb-1 uppercase tracking-tight">First Best Paper</h3>
                   </div>
-                  <CardContent className="p-8 space-y-6">
+                  <CardContent className="p-6 sm:p-10 space-y-6">
                     <div className="flex items-baseline gap-2">
-                      <span className="text-3xl font-black text-navy">₹4,000</span>
-                      <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">Cash Reward</span>
+                      <span className="text-2xl sm:text-4xl font-black text-navy">₹4,000</span>
+                      <span className="text-[10px] sm:text-xs font-bold text-slate-400 uppercase tracking-widest">Cash Reward</span>
                     </div>
-                    <div className="space-y-3">
+                    <div className="space-y-4">
                       {[
                         "Gold Medal for First Best Paper",
                         "Prestigious Excellence Certificate",
-                      
                         "Recommendation for Premium Journal",
                         "Featured Showcase on Website"
                       ].map((item, i) => (
-                        <div key={i} className="flex gap-3 items-center">
-                          <CheckCircle2 className="text-amber-500 shrink-0" size={16} />
-                          <span className="text-sm text-slate-600 font-semibold">{item}</span>
+                        <div key={i} className="flex gap-3 items-start">
+                          <CheckCircle2 className="text-amber-500 shrink-0 mt-0.5" size={16} />
+                          <span className="text-xs sm:text-base text-slate-600 font-semibold leading-tight">{item}</span>
                         </div>
                       ))}
                     </div>
@@ -94,35 +96,33 @@ const Publication = () => {
               </Reveal>
 
               {/* Second Prize */}
-              <Reveal className="relative group" delay={400}>
-                <div className="absolute -inset-1 bg-gradient-to-r from-slate-200 to-slate-400 rounded-[2.5rem] blur opacity-10 group-hover:opacity-30 transition duration-700"></div>
-                <Card className="relative border-slate-100 shadow-xl rounded-[2.2rem] overflow-hidden bg-white">
-                  <div className="bg-gradient-to-br from-slate-50 to-white p-8 border-b border-slate-100">
+              <Reveal className="relative group w-full min-w-0" delay={400}>
+                <div className="absolute -inset-1 bg-gradient-to-r from-slate-200 to-slate-400 rounded-[2.5rem] blur opacity-10 group-hover:opacity-30 transition duration-700 hidden sm:block"></div>
+                <Card className="relative border-slate-100 shadow-xl rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden bg-white mx-0">
+                  <div className="bg-gradient-to-br from-slate-50 to-white p-6 sm:p-10 border-b border-slate-100">
                     <div className="flex justify-between items-start mb-6">
-                      <div className="w-14 h-14 bg-white rounded-2xl shadow-md flex items-center justify-center border border-slate-200">
-                        <Medal className="text-slate-400" size={32} />
+                      <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-2xl shadow-md flex items-center justify-center border border-slate-200">
+                        <Medal className="text-slate-400" size={28} />
                       </div>
-                      <span className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 bg-slate-100 px-3 py-1 rounded-full">Secondary Award</span>
+                      <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 bg-slate-100 px-3 py-1 rounded-full">Secondary Award</span>
                     </div>
-                    <h3 className="text-xl font-black text-navy mb-1 uppercase tracking-tight">Second Best Paper</h3>
-                    {/* <p className="text-xs font-bold text-slate-400 uppercase tracking-widest">Emerging Researcher Recognition</p> */}
+                    <h3 className="text-xl sm:text-2xl font-black text-navy mb-1 uppercase tracking-tight">Second Best Paper</h3>
                   </div>
-                  <CardContent className="p-8 space-y-6">
+                  <CardContent className="p-6 sm:p-10 space-y-6">
                     <div className="flex items-baseline gap-2">
-                      <span className="text-3xl font-black text-navy">₹2,000</span>
-                      <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">Cash Reward</span>
+                      <span className="text-2xl sm:text-4xl font-black text-navy">₹2,000</span>
+                      <span className="text-[10px] sm:text-xs font-bold text-slate-400 uppercase tracking-widest">Cash Reward</span>
                     </div>
-                    <div className="space-y-3">
+                    <div className="space-y-4">
                       {[
                         "Silver Medal for Second Best Paper",
-                       "Prestigious Excellence Certificate",
-
+                        "Prestigious Excellence Certificate",
                         "Recommendation for Premium Journal",
                         "Featured Showcase on Website"
                       ].map((item, i) => (
-                        <div key={i} className="flex gap-3 items-center">
-                          <CheckCircle2 className="text-slate-400 shrink-0" size={16} />
-                          <span className="text-sm text-slate-600 font-semibold">{item}</span>
+                        <div key={i} className="flex gap-3 items-start">
+                          <CheckCircle2 className="text-slate-400 shrink-0 mt-0.5" size={16} />
+                          <span className="text-xs sm:text-base text-slate-600 font-semibold leading-tight">{item}</span>
                         </div>
                       ))}
                     </div>
@@ -136,13 +136,13 @@ const Publication = () => {
 
       {/* Publication Channels Section */}
       <section className="py-16 sm:py-24 bg-slate-50 border-y border-slate-100 overflow-hidden">
-        <div className="container px-4">
+        <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <Reveal className="text-center mb-16 space-y-4">
-              <h2 className="text-2xl sm:text-3xl font-black text-navy uppercase tracking-tighter">
+            <Reveal className="text-center mb-12 sm:mb-16 space-y-4">
+              <h2 className="text-2xl sm:text-4xl font-black text-navy uppercase tracking-tighter">
                 Publication Channels
               </h2>
-              <p className="text-slate-500 text-sm max-w-xl mx-auto font-medium">
+              <p className="text-slate-500 text-sm sm:text-base max-w-xl mx-auto font-medium">
                 We offer multiple tiers of publication to ensure every high-quality submission finds its rightful audience.
               </p>
             </Reveal>
@@ -150,26 +150,26 @@ const Publication = () => {
             <div className="grid lg:grid-cols-12 gap-8 items-stretch">
 
               {/* Conference Proceedings (All Accepted) */}
-              <Reveal className="lg:col-span-5 order-2 lg:order-1" delay={200}>
-                <Card className="h-full border-none shadow-xl rounded-[2.5rem] overflow-hidden group bg-white">
-                  <div className="p-8 bg-navy text-white relative h-full">
+              <Reveal className="lg:col-span-5 order-2 lg:order-1 min-w-0" delay={200}>
+                <Card className="h-full border-none shadow-xl rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden group bg-white">
+                  <div className="p-8 sm:p-10 bg-navy text-white relative h-full">
                     <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full -mr-16 -mt-16 blur-2xl pointer-events-none" />
                     <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-10 shadow-inner">
                       <BookOpen size={24} className="text-[#FFD700]" />
                     </div>
-                    <h4 className="text-sm font-black text-[#FFD700]/60 uppercase tracking-widest mb-2">Standard Channel</h4>
-                    <h3 className="text-2xl font-black uppercase tracking-tight mb-4">Conference Proceedings</h3>
-                    <p className="text-white/60 text-xs font-medium leading-relaxed mb-8">
+                    <h4 className="text-[10px] sm:text-xs font-black text-[#FFD700]/60 uppercase tracking-widest mb-2">Standard Channel</h4>
+                    <h3 className="text-xl sm:text-2xl font-black uppercase tracking-tight mb-4 leading-tight">Conference Proceedings</h3>
+                    <p className="text-white/60 text-[13px] sm:text-sm font-medium leading-relaxed mb-8">
                       Every paper accepted and presented at DMCE-GTC 2026 is guaranteed a spot in our official digital proceedings.
                     </p>
                     <div className="space-y-4 pt-6 border-t border-white/5">
                       <div className="flex gap-3">
                         <FileCheck className="text-secondary shrink-0" size={18} />
-                        <span className="text-[13px] font-bold text-white/80">Soft copy shared via registered Email</span>
+                        <span className="text-[12px] sm:text-[13px] font-bold text-white/80">Soft copy shared via registered Email</span>
                       </div>
                       <div className="flex gap-3">
                         <Globe className="text-secondary shrink-0" size={18} />
-                        <span className="text-[13px] font-bold text-white/80">Archived in official DMCE repository</span>
+                        <span className="text-[12px] sm:text-[13px] font-bold text-white/80">Archived in official DMCE repository</span>
                       </div>
                     </div>
                   </div>
@@ -177,17 +177,17 @@ const Publication = () => {
               </Reveal>
 
               {/* Journal Publication (WoS Indexed) */}
-              <Reveal className="lg:col-span-7 order-1 lg:order-2" delay={400}>
-                <Card className="h-full border-white/20 shadow-2xl rounded-[2.5rem] overflow-hidden bg-white border-2">
+              <Reveal className="lg:col-span-7 order-1 lg:order-2 min-w-0" delay={400}>
+                <Card className="h-full border-white/20 shadow-2xl rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden bg-white border-2">
                   <CardContent className="p-8 sm:p-12 space-y-8">
-                    <div className="flex items-center gap-4">
-                      <div className="w-14 h-14 bg-secondary/10 rounded-2xl flex items-center justify-center">
+                    <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 text-center sm:text-left">
+                      <div className="w-14 h-14 bg-secondary/10 rounded-2xl flex items-center justify-center shrink-0">
                         <ShieldCheck size={28} className="text-secondary" />
                       </div>
-                      <div>
-                        <h3 className="text-2xl font-black text-navy uppercase tracking-tighter leading-none mb-2">Journal Publication</h3>
-                        <div className="flex items-center gap-2">
-                          <span className="text-[10px] font-black text-white bg-secondary px-2 py-0.5 rounded uppercase tracking-widest">WoS Indexed</span>
+                      <div className="min-w-0">
+                        <h3 className="text-xl sm:text-2xl font-black text-navy uppercase tracking-tighter leading-tight mb-2 break-words">Journal Publication</h3>
+                        <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2">
+                          <span className="text-[9px] sm:text-[10px] font-black text-white bg-secondary px-2 py-0.5 rounded uppercase tracking-widest">WoS Indexed</span>
                           <span className="text-[10px] font-bold text-slate-400">High Impact Platform</span>
                         </div>
                       </div>
@@ -200,14 +200,14 @@ const Publication = () => {
 
                       <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100 space-y-4">
                         <div className="flex items-start gap-3">
-                          <AlertTriangle size={18} className="text-amber-500 shrink-0 mt-0.5" />
-                          <p className="text-xs text-slate-500 font-bold leading-relaxed italic">
+                          <AlertTriangle size={16} className="text-amber-500 shrink-0 mt-0.5" />
+                          <p className="text-[11px] sm:text-xs text-slate-500 font-bold leading-relaxed italic break-words">
                             Final acceptance is subject to the review process and quality standards of the respective journal.
                           </p>
                         </div>
                         <div className="flex items-start gap-3">
-                          <AlertTriangle size={18} className="text-amber-500 shrink-0 mt-0.5" />
-                          <p className="text-xs text-slate-500 font-bold leading-relaxed italic">
+                          <AlertTriangle size={16} className="text-amber-500 shrink-0 mt-0.5" />
+                          <p className="text-[11px] sm:text-xs text-slate-500 font-bold leading-relaxed italic break-words">
                             Additional publication charges levied by the journal (if any) are to be borne by the authors.
                           </p>
                         </div>
@@ -224,47 +224,46 @@ const Publication = () => {
 
       {/* Certificates Section */}
       <section className="py-16 sm:py-24 bg-white overflow-hidden">
-        <div className="container px-4">
+        <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <Reveal className="space-y-6">
+              <Reveal className="space-y-6 text-center md:text-left">
                 <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary rounded-full">
                   <FileText size={14} />
                   <span className="text-[10px] font-black uppercase tracking-widest">Deliverable</span>
                 </div>
-                <h2 className="text-2xl sm:text-3xl font-black text-navy uppercase tracking-tighter">
+                <h2 className="text-2xl sm:text-4xl font-black text-navy uppercase tracking-tighter">
                   Official Certificates
                 </h2>
                 <p className="text-slate-500 text-sm sm:text-base font-medium leading-relaxed">
                   Every author and co-author contributing to DMCE-GTC 2026 will receive an official E-Certificate of Participation.
                 </p>
-                <div className="space-y-4">
+                <div className="space-y-4 text-left max-w-xs mx-auto md:mx-0">
                   {[
                     "Digitally Signed & Verified",
-          
                     "Sent to Registered Email Addresses",
                     "Separate Certificate for Every Co-author"
                   ].map((item, i) => (
                     <div key={i} className="flex gap-3 items-center">
-                      <CheckCircle2 className="text-primary" size={18} />
-                      <span className="text-[13px] font-bold text-navy/80">{item}</span>
+                      <CheckCircle2 className="text-primary shrink-0" size={18} />
+                      <span className="text-xs sm:text-[13px] font-bold text-navy/80">{item}</span>
                     </div>
                   ))}
                 </div>
               </Reveal>
 
-              <Reveal className="relative" delay={300}>
+              <Reveal className="relative w-full min-w-0" delay={300}>
                 <div className="absolute -inset-10 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
-                <Card className="relative border-none shadow-2xl rounded-[2.5rem] bg-navy p-8 text-center text-white overflow-hidden">
+                <Card className="relative border-none shadow-2xl rounded-[2rem] sm:rounded-[2.5rem] bg-navy p-6 sm:p-10 text-center text-white overflow-hidden mx-0">
                   <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-secondary to-primary/0" />
-                  <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl">
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl">
                     <ShieldCheck size={32} className="text-secondary" />
                   </div>
-                  <h3 className="text-xl font-bold mb-2 uppercase tracking-tight text-center">E-PROCEEDINGS</h3>
-                  <p className="text-white/40 text-[10px] font-black uppercase tracking-[0.2em] mb-6 text-center">Included for all authors</p>
+                  <h3 className="text-xl font-bold mb-2 uppercase tracking-tight">E-PROCEEDINGS</h3>
+                  <p className="text-white/40 text-[9px] sm:text-[10px] font-black uppercase tracking-[0.2em] mb-6">Included for all authors</p>
                   <div className="p-4 bg-white/5 rounded-2xl border border-white/10 flex items-center gap-4 text-left">
                     <Mail className="text-secondary shrink-0" size={18} />
-                    <p className="text-[11px] font-medium leading-relaxed">Proceedings will be dispatched to your registered email ID within 30 days post-conference.</p>
+                    <p className="text-[10px] sm:text-[11px] font-medium leading-relaxed">Proceedings will be dispatched to your registered email ID within 30 days post-conference.</p>
                   </div>
                 </Card>
               </Reveal>
@@ -275,19 +274,19 @@ const Publication = () => {
 
       {/* Final CTA */}
       <Reveal className="pb-20 pt-10 bg-white">
-        <div className="container px-4">
-          <div className="max-w-4xl mx-auto p-12 bg-slate-50 rounded-[3rem] text-center border border-slate-100 relative overflow-hidden group">
-            <h3 className="font-heading text-xl sm:text-2xl font-bold text-navy mb-4 relative z-10">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto p-8 sm:p-16 bg-slate-50 rounded-[2rem] sm:rounded-[4rem] text-center border border-slate-100 relative overflow-hidden group">
+            <h3 className="font-heading text-xl sm:text-3xl font-bold text-navy mb-4 relative z-10">
               Transform Your Research into Impact
             </h3>
-            <p className="text-slate-500 text-sm mb-8 font-medium relative z-10 max-w-lg mx-auto">
-              Join prestegious journals and gain global recognition. Submit your original manuscript today.
+            <p className="text-slate-500 text-sm sm:text-base mb-8 sm:mb-10 font-medium relative z-10 max-w-lg mx-auto leading-relaxed">
+              Join prestigious journals and gain global recognition. Submit your original manuscript today.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
-              <Button asChild size="lg" className="bg-primary hover:bg-navy text-white font-black text-[10px] uppercase tracking-widest rounded-full px-10 h-12 shadow-xl shadow-primary/20">
-                <a href="https://forms.gle/vndeiaLQmg5WpjQCA">Submit Your Paper</a>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 relative z-10">
+              <Button asChild size="lg" className="w-full sm:w-auto bg-primary hover:bg-navy text-white font-black text-[10px] uppercase tracking-widest rounded-full px-10 h-12 shadow-xl shadow-primary/20">
+                <a href="https://forms.gle/vndeiaLQmg5WpjQCA" target="_blank" rel="noopener noreferrer">Submit Your Paper</a>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-slate-200 text-navy font-black text-[10px] uppercase tracking-widest rounded-full px-10 h-12 hover:bg-white hover:border-primary/20 bg-white">
+              <Button asChild variant="outline" size="lg" className="w-full sm:w-auto border-slate-200 text-navy font-black text-[10px] uppercase tracking-widest rounded-full px-10 h-12 hover:bg-white hover:border-primary/20 bg-white">
                 <Link to="/cfp">View Call for Papers</Link>
               </Button>
             </div>
