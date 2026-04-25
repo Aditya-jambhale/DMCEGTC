@@ -41,7 +41,7 @@ const committees = [
   {
     title: "Conference Convenor",
     icon: User,
-    members: [{ name: "Dr. P. A. Dode", role: "Principal, DMCE, Airoli" }],
+    members: [{ name: "Dr. S. D. Sawarkar", role: "Principal,DMCE & Executive Director, NYSS, Airoli" }],
   },
   {
     title: "Conference Chair & CSI CATT Representative",
