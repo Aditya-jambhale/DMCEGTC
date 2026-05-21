@@ -3,26 +3,17 @@ import { Layout } from "@/components/Layout";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card, CardContent } from "@/components/ui/card";
 import { User, Mic2, Star, BadgeCheck } from "lucide-react";
+import shansir from "@/assets/Dr. Suresh Shan.jpg";
 
 const speakers = [
   {
-    name: "Speaker Name",
-    designation: "Designation / Institution",
-    topic: "Keynote Topic",
-    image: null, // To be added later
+    name: "Dr. Suresh Shan",
+    designation: "Chairperson , CSI",
+    topic: "Keynote Address on Emerging Technologies",
+    image: shansir, // To be added later
   },
-  {
-    name: "Speaker Name",
-    designation: "Designation / Institution",
-    topic: "Keynote Topic",
-    image: null, // To be added later
-  },
-  {
-    name: "Speaker Name",
-    designation: "Designation / Institution",
-    topic: "Keynote Topic",
-    image: null, // To be added later
-  },
+  
+ 
 ];
 
 const Speakers = () => {
