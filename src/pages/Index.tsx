@@ -27,7 +27,8 @@ import {
   Mic2,
   User,
   Eye,
-  CheckCircle2
+  CheckCircle2,
+  FileCheck
 } from "lucide-react";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { ConferenceTracks } from "@/components/ConferenceTracks";
@@ -284,8 +285,8 @@ const Index = () => {
             </p>
           </Reveal>
 
-          {/* GRID FIXED — NO MORE STRETCHING */}
-          <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto items-start">
+          {/* GRID FIXED — 3 COLUMNS */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto items-start">
 
             {/* POSTER CARD */}
             <Reveal delay={100}>
@@ -327,12 +328,9 @@ const Index = () => {
                   </div>
                 </DialogContent>
 
-
-
               </Dialog>
             </Reveal>
 
-            {/* BROCHURE CARD */}
             {/* BROCHURE CARD */}
             <Reveal delay={200}>
               <Card className="border-white/10 bg-white/5 backdrop-blur-sm rounded-[2rem] overflow-hidden shadow-2xl flex flex-col">
@@ -372,6 +370,62 @@ const Index = () => {
                 </CardContent>
               </Card>
             </Reveal>
+
+         {/* PROCEEDINGS CARD */}
+<Reveal delay={300}>
+  <Card className="border-white/10 bg-white/5 backdrop-blur-sm rounded-[2rem] overflow-hidden shadow-2xl flex flex-col">
+    <CardContent className="p-6 sm:p-8 flex flex-col space-y-6">
+      <div className="flex items-center gap-4">
+        <div className="w-12 h-12 bg-gradient-to-br from-[#FFD700] to-[#FFA500] rounded-xl flex items-center justify-center shadow-lg shadow-[#FFD700]/20">
+          <FileCheck size={24} className="text-navy" />
+        </div>
+        <div>
+          <h3 className="text-base font-black text-white uppercase tracking-tight">
+            Paper Proceedings
+          </h3>
+          <p className="text-[9px] font-black text-white/40 uppercase tracking-widest">
+            GTC 2026 Compilation
+          </p>
+        </div>
+      </div>
+
+      {/* PROCEEDINGS PDF PREVIEW */}
+      <div className="relative h-64 max-h-64 w-full bg-black/40 rounded-xl overflow-hidden border border-white/5 shadow-inner">
+        <iframe
+          src="https://drive.google.com/file/d/1lQDx6Ca2RLvNWE1u2i01_k3ao-PX93cj/preview"
+          className="w-full h-full border-none"
+          title="Conference Proceedings"
+          loading="lazy"
+        />
+      </div>
+
+      <div className="grid grid-cols-2 gap-2 pt-2">
+        <Button
+          asChild
+          className="h-11 bg-[#FFD700] hover:bg-white text-navy font-black text-[10px] uppercase tracking-widest rounded-full shadow-lg shadow-[#FFD700]/10"
+        >
+          <a href="https://drive.google.com/uc?export=download&id=1lQDx6Ca2RLvNWE1u2i01_k3ao-PX93cj">
+            <Download className="mr-2 h-4 w-4" /> Download
+          </a>
+        </Button>
+
+        <Button
+          asChild
+          variant="outline"
+          className="h-11 border-white/20 bg-white/5 text-white hover:bg-white/10 text-[10px] font-black uppercase tracking-widest rounded-full"
+        >
+          <a
+            href="https://drive.google.com/file/d/1lQDx6Ca2RLvNWE1u2i01_k3ao-PX93cj/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <ExternalLink className="mr-2 h-3 w-3" /> View PDF
+          </a>
+        </Button>
+      </div>
+    </CardContent>
+  </Card>
+</Reveal>
 
 
           </div>

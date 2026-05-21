@@ -18,6 +18,7 @@ const navItems = [
   { name: "Registration", path: "/registration" },
   // { name: "Paper Submission", path: "/paper-submission" },
   { name: "Publication", path: "/publication" },
+  { name: "Gallery", path: "/gallery" },
   { name: "Contact Us", path: "/contact" },
 ];
 

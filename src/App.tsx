@@ -17,6 +17,7 @@ import Publication from "./pages/Publication";
 import ScrollToTop from "./components/ScrollToTop";
 import NotFound from "./pages/NotFound";
 import Contact from "./pages/contact"
+import Gallery from "./pages/Gallery";
 
 const queryClient = new QueryClient();
 
@@ -41,7 +42,8 @@ const App = () => {
             <Route path="/registration" element={<Registration />} />
             {/* <Route path="/paper-submission" element={<PaperSubmission />} /> */}
             <Route path="/publication" element={<Publication />} />
-              <Route path="/contact" element={<Contact />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/gallery" element={<Gallery />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
