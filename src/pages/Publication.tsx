@@ -15,7 +15,9 @@ import {
   Mail,
   ArrowRight,
   ShieldCheck,
-  FileCheck
+  FileCheck,
+  Download,
+  ExternalLink
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -254,17 +256,58 @@ const Publication = () => {
 
               <Reveal className="relative w-full min-w-0" delay={300}>
                 <div className="absolute -inset-10 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
-                <Card className="relative border-none shadow-2xl rounded-[2rem] sm:rounded-[2.5rem] bg-navy p-6 sm:p-10 text-center text-white overflow-hidden mx-0">
+                <Card className="border-none bg-navy rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden shadow-2xl flex flex-col p-6 sm:p-10 text-white mx-0 relative">
                   <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-secondary to-primary/0" />
-                  <div className="w-14 h-14 sm:w-16 sm:h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl">
-                    <ShieldCheck size={32} className="text-secondary" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-2 uppercase tracking-tight">E-PROCEEDINGS</h3>
-                  <p className="text-white/40 text-[9px] sm:text-[10px] font-black uppercase tracking-[0.2em] mb-6">Included for all authors</p>
-                  <div className="p-4 bg-white/5 rounded-2xl border border-white/10 flex items-center gap-4 text-left">
-                    <Mail className="text-secondary shrink-0" size={18} />
-                    <p className="text-[10px] sm:text-[11px] font-medium leading-relaxed">Proceedings will be dispatched to your registered email ID within 30 days post-conference.</p>
-                  </div>
+                  <CardContent className="p-0 flex flex-col space-y-6">
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 bg-gradient-to-br from-[#FFD700] to-[#FFA500] rounded-xl flex items-center justify-center shadow-lg shadow-[#FFD700]/20">
+                        <FileCheck size={24} className="text-navy" />
+                      </div>
+                      <div>
+                        <h3 className="text-base font-black text-white uppercase tracking-tight">
+                          Paper Proceedings
+                        </h3>
+                        <p className="text-[9px] font-black text-white/40 uppercase tracking-widest">
+                          GTC 2026 Compilation
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* PROCEEDINGS PDF PREVIEW */}
+                    <div className="relative h-64 max-h-64 w-full bg-white/5 rounded-xl overflow-hidden border border-white/10 shadow-inner">
+                      <iframe
+                        src="https://drive.google.com/file/d/1lQDx6Ca2RLvNWE1u2i01_k3ao-PX93cj/preview"
+                        className="w-full h-full border-none"
+                        title="Conference Proceedings"
+                        loading="lazy"
+                      />
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-2 pt-2">
+                      <Button
+                        asChild
+                        className="h-11 bg-[#FFD700] hover:bg-white text-navy font-black text-[10px] uppercase tracking-widest rounded-full shadow-lg shadow-[#FFD700]/10 border-none"
+                      >
+                        <a href="https://drive.google.com/uc?export=download&id=1lQDx6Ca2RLvNWE1u2i01_k3ao-PX93cj">
+                          <Download className="mr-2 h-4 w-4" /> Download
+                        </a>
+                      </Button>
+
+                      <Button
+                        asChild
+                        variant="outline"
+                        className="h-11 border-white/20 bg-white/5 text-white hover:bg-white/10 text-[10px] font-black uppercase tracking-widest rounded-full hover:text-white"
+                      >
+                        <a
+                          href="https://drive.google.com/file/d/1lQDx6Ca2RLvNWE1u2i01_k3ao-PX93cj/view?usp=sharing"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <ExternalLink className="mr-2 h-3 w-3" /> View PDF
+                        </a>
+                      </Button>
+                    </div>
+                  </CardContent>
                 </Card>
               </Reveal>
             </div>
