@@ -16,15 +16,15 @@ const track1Achievers: Achiever[] = [
   {
     rank: "Winner",
     name: "Rohan Tavade, Aditya Thanage, Riya Tiwari, Sanjana Saw, Dr. Bandu Meshram",
-    paperId: "Paper ID: #GTC-T1-01",
+    paperId: "Paper ID: P99",
     paperTitle:
-      '"Stake-Aware Learning with False Alarm Reduction: A Modular Framework for Risk-Sensitive Prediction"',
+      '"Image Deepfake Detection Framework"',
     affiliation: "Datta Meghe College of Engineering",
   },
   {
     rank: "1st Runner Up",
-    name: "Mehnaz Ali, Atharva Khond, Payal Bombe, Gaurang Gadhari, Mrs. Jyoti Gaikwad",
-    paperId: "Paper ID: #GTC-T1-02",
+    name: " Atharva Khond",
+    paperId: "Paper ID: P45 ",
     paperTitle:
       '"A Heterogeneous Ensemble Framework for Predicting Multi-Factor College Admission Cutoffs"',
     affiliation: "Datta Meghe College of Engineering",
@@ -34,16 +34,16 @@ const track1Achievers: Achiever[] = [
 const track2Achievers: Achiever[] = [
   {
     rank: "Winner",
-    name: "Javeshvi Rawat, Rahul Vitthal Patil, Vaishnavi Avinash Dhole, Shreya Mahendra Waghmare",
-    paperId: "Paper ID: #GTC-T2-01",
+    name: "Jayesh Raut",
+    paperId: "Paper ID: P72",
     paperTitle:
       '"Stake-Aware Learning with False Alarm Reduction: A Modular Framework for Risk-Sensitive Prediction"',
     affiliation: "A.C. Patil College of Engineering, Kharghar",
   },
   {
     rank: "1st Runner Up",
-    name: "Tanisha Pakki, Sai Pawar, Neha Singh, Seema Mishra",
-    paperId: "Paper ID: #GTC-T2-02",
+    name: "Tanisha Pakki",
+    paperId: "Paper ID: P4 ",
     paperTitle: '"AI-Powered Legal Aid Chatbot for Women Safety"',
     affiliation: "Pillai College of Engineering",
   },
